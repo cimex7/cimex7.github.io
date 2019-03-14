@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+    <meta name="description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令(一)">
 <meta property="og:url" content="http://yoursite.com/2019/03/14/2019-3-14-1/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+<meta property="og:description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-14T12:04:28.934Z">
+<meta property="og:updated_time" content="2019-03-14T12:29:57.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令(一)">
-<meta name="twitter:description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+<meta name="twitter:description" content="1、ls命令        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
 
 
 
@@ -146,7 +146,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    14 分钟 读完 (大约 2057 个字)
+                    14 分钟 读完 (大约 2056 个字)
                 </span>
                 
                 
@@ -159,10 +159,8 @@
             
         </h1>
         <div class="content">
-            <p>1、ls命令<br>        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等<br><a id="more"></a><br>        常用参数搭配：</p>
-<pre><code>ls -a 列出目录所有文件，包含以.开始的隐藏文件
-
-ls -A 列出除.及..的其它文件
+            <p>1、ls命令<br>        就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等<br><a id="more"></a><br>        常用参数搭配：<br>         ls -a 列出目录所有文件，包含以.开始的隐藏文件</p>
+<pre><code>ls -A 列出除.及..的其它文件
 
 ls -r 反序排列
 
@@ -175,114 +173,104 @@ ls -h 以易读大小显示
 ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来
 
 实例：
-
 (1) 按易读方式按时间反序排序，并显示文件详细信息
 
-ls -lhrt
+ ls -lhrt
 
 (2) 按大小反序显示文件详细信息
 
-ls -lrS
+ ls -lrS
 
 (3)列出当前目录中所有以“t”开头的目录的详细内容
 
-ls -l t*
+ ls -l t*
 
 (4) 列出文件绝对路径（不包含隐藏文件）
 
-ls | sed &quot;s:^:`pwd`/:&quot;
+ ls | sed &quot;s:^:`pwd`/:&quot;
 
 (5) 列出文件绝对路径（包含隐藏文件）
 
-find $pwd -maxdepth 1 | xargs ls -ld
+ find $pwd -maxdepth 1 | xargs ls -ld
 </code></pre><p>2、cd命令<br>         (changeDirectory),命令语法：cd [目录名]。说明：切换当前目录至dirName</p>
 <pre><code>实例：
-
 （1）进入要目录
 
-cd /
+ cd /
 
 （2）进入&quot;家&quot;目录
 
-cd ~
+ cd ~
 
 （3）进入上一次工作路径
 
-cd -
+ cd -
 
 （4）把上个命令的参数作为cd参数使用。
 
-cd !$
-</code></pre><p>3、pwd命令<br>         查看当前工作目录路径</p>
-<pre><code>实例：
+ cd !$
+</code></pre><p>3、pwd命令<br>         查看当前工作目录路径<br>         实例：</p>
+<pre><code>（1）查看当前路径
 
-（1）查看当前路径
-
-pwd
+ pwd
 
 （2）查看软链接的实际路径
 
-pwd -P
+ pwd -P
 </code></pre><p>4、mkdir命令<br>         创建文件夹</p>
 <pre><code>可用选项：
 
 -m: 对新建目录设置存取权限,也可以用chmod命令设置;
 
-    -p: 可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那                      些尚不在的目录,即一次可以建立多个目录;
+-p: 可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那                      些尚不在的目录,即一次可以建立多个目录;
 
 实例：
-
 （1）当前工作目录下创建名为t的文件夹
 
-mkdir t
+ mkdir t
 
 （2）在tmp目录下创建路径为test/t1/t的目录，若不存在，则创建
 
-mkdir -p /tmp/test/t1/t
+ mkdir -p /tmp/test/t1/t
 </code></pre><p>5、rm命令<br>         删除一个目录中的一个或多个文件或目录，如果没有使用- r选项，则rm不会删除目录。如果使用              rm 来删除文件，通常仍可以将该文件恢复原状</p>
 <pre><code>rm [选项] 文件…
 
 实例：
-
 （1）删除任何.log文件；删除前逐一询问确认
 
-rm -i *.log
+ rm -i *.log
 
 （2）删除test子目录及子目录中所有档案删除,并且不用一一确认
 
-rm -rf test
+ rm -rf test
 
 （3）删除以-f开头的文件
 
-rm -- -f*
-</code></pre><p>6、rmdir命令<br>         从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对其父目录的写权限。</p>
-<pre><code>注意：不能删除非空目录
-
-实例：
-
+ rm -- -f*
+</code></pre><p>6、rmdir命令<br>         从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对其父目录的写权限。<br>        注意：不能删除非空目录</p>
+<pre><code>实例：
 （1）当parent子目录被删除后使它也成为空目录的话，则顺便一并删除
 
-rmdir -p parent/child/child11
+ rmdir -p parent/child/child11
 </code></pre><p>7、mv命令<br>         移动文件或修改文件名，根据第二参数类型（如目录，则移动文件；如为文件则重命令该文件）。      </p>
 <pre><code>当第二个参数为目录时，可刚多个文件以空格分隔作为第一参数，移动多个文件到参数2指定的目录中
 
 实例：
-
 （1）将文件test.log重命名为test1.txt
 
-mv test.log test1.txt
+ mv test.log test1.txt
 
 （2）将文件log1.txt,log2.txt,log3.txt移动到根的test3目录中
 
-mv llog1.txt log2.txt log3.txt /test3
+ mv llog1.txt log2.txt log3.txt /test3
 
 （3）将文件file1改名为file2，如果file2已经存在，则询问是否覆盖
 
-mv -i log1.txt log2.txt
+ mv -i log1.txt log2.txt
 
 （4）移动当前文件夹下的所有文件到上一级目录
 
-mv * ../
+ mv * ../
 </code></pre><p>8、cp命令<br>         将源文件复制至目标文件，或将多个源文件复制至目标目录。</p>
 <pre><code>注意：命令行复制，如果目标文件已经存在会提示是否覆盖，而在shell脚本中，如果不加-i参数，则不会提示，而是直接覆盖！
 
@@ -293,66 +281,55 @@ mv * ../
 -a 复制的文件与原文件时间一样
 
 实例：
-
 （1）复制a.txt到test目录下，保持原文件时间,如果原文件存在提示是否覆盖
 
-cp -ai a.txt test
+ cp -ai a.txt test
 
 （2）为a.txt建议一个链接（快捷方式）
 
-cp -s a.txt link_a.txt
+ cp -s a.txt link_a.txt
 </code></pre><p>9、cat命令<br>         cat主要有三大功能：</p>
 <pre><code>1.一次显示整个文件:cat filename
-
 2.从键盘创建一个文件:cat &gt; filename 只能创建新文件,不能编辑已有文件.
-
 3.将几个文件合并为一个文件:cat file1 file2 &gt; file
 
 -b对非空输出行号
-
 -n输出所有行号
 
 实例：
-
 （1）把 log2012.log 的文件内容加上行号后输入 log2013.log 这个文件里
 
-cat -n log2012.log log2013.log
+ cat -n log2012.log log2013.log
 
 （2）把 log2012.log 和 log2013.log 的文件内容加上行号（空白行不加）之后将内容附加到 log.log 里
 
-cat -b log2012.log log2013.log log.log
+ cat -b log2012.log log2013.log log.log
 
 （3）使用here doc生成新文件
 
-cat &gt;log.txt &lt;&lt;EOF
+ cat &gt;log.txt &lt;&lt;EOF
 
 &gt;Hello
-
 &gt;World
-
 &gt;PWD=$(pwd)
-
 &gt;EOF
 
 ls -l log.txt
-
 cat log.txt
-
 Hello
-
 World
 
 PWD=/opt/soft/test
 
 （4）反向列示
 
-tac log.txt
+ tac log.txt
 
-PWD=/opt/soft/test
+ PWD=/opt/soft/test
 
-World
+ World
 
-Hello
+ Hello
 </code></pre><p>10、more命令<br>         功能类似于cat, more会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示</p>
 <pre><code>-&gt;&gt;命令参数：
 
@@ -450,11 +427,11 @@ y  向前滚动一行
 
 （1）ps查看进程信息并通过less分页显示
 
-ps -aux | less -N
+ ps -aux | less -N
 
 （2）查看多个文件
 
-less 1.log 2.log
+ less 1.log 2.log
 
 可以使用n查看下一个，使用p查看前一个
 </code></pre>
