@@ -8,14 +8,14 @@
 
 
     <meta name="description" content="1、ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
-<meta name="keywords" content="Linux">
+<meta name="keywords" content="入门">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令(一)">
 <meta property="og:url" content="http://yoursite.com/2019/03/14/2019-3-14-1/index.html">
 <meta property="og:site_name" content="Cimex">
 <meta property="og:description" content="1、ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-14T13:19:32.757Z">
+<meta property="og:updated_time" content="2019-03-15T02:10:47.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令(一)">
 <meta name="twitter:description" content="1、ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
@@ -115,6 +115,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -143,7 +147,7 @@
                 <time class="level-item has-text-grey" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>
+                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
                 </div>
                 
                 
@@ -309,7 +313,7 @@ Hello
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                    <a class="has-link-grey -link" href="/tags/入门/">入门</a>
                 </div>
             </div>
         </div>
@@ -344,7 +348,353 @@ Hello
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Pawn">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Pawn
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        1
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/cimex7">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="zhihu" href="https://www.zhihu.com/people/tian-zhen-42-66">
+                
+                <i class="fab fa-zhihu"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="weibo" href="https://weibo.com/u/5633518734">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#1、ls命令">
+        <span class="has-mr-6">1</span>
+        <span>1、ls命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#常用参数搭配：">
+        <span class="has-mr-6">1.1</span>
+        <span>常用参数搭配：</span>
+        </a></li><li>
+        <a class="is-flex" href="#实例">
+        <span class="has-mr-6">1.2</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#2、cd命令">
+        <span class="has-mr-6">2</span>
+        <span>2、cd命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-1">
+        <span class="has-mr-6">2.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#3、pwd命令">
+        <span class="has-mr-6">3</span>
+        <span>3、pwd命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-2">
+        <span class="has-mr-6">3.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#4、mkdir命令">
+        <span class="has-mr-6">4</span>
+        <span>4、mkdir命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#可用选项：">
+        <span class="has-mr-6">4.1</span>
+        <span>可用选项：</span>
+        </a></li><li>
+        <a class="is-flex" href="#实例-3">
+        <span class="has-mr-6">4.2</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#5、rm命令">
+        <span class="has-mr-6">5</span>
+        <span>5、rm命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-4">
+        <span class="has-mr-6">5.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#6、rmdir命令">
+        <span class="has-mr-6">6</span>
+        <span>6、rmdir命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-5">
+        <span class="has-mr-6">6.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#7、mv命令">
+        <span class="has-mr-6">7</span>
+        <span>7、mv命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-6">
+        <span class="has-mr-6">7.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#8、cp命令">
+        <span class="has-mr-6">8</span>
+        <span>8、cp命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#实例-7">
+        <span class="has-mr-6">8.1</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#9、cat命令">
+        <span class="has-mr-6">9</span>
+        <span>9、cat命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#cat主要有三大功能：">
+        <span class="has-mr-6">9.1</span>
+        <span>cat主要有三大功能：</span>
+        </a></li><li>
+        <a class="is-flex" href="#实例-8">
+        <span class="has-mr-6">9.2</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#10、more命令">
+        <span class="has-mr-6">10</span>
+        <span>10、more命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#命令参数：">
+        <span class="has-mr-6">10.1</span>
+        <span>命令参数：</span>
+        </a></li><li>
+        <a class="is-flex" href="#实例-9">
+        <span class="has-mr-6">10.2</span>
+        <span>实例:</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#11、less命令">
+        <span class="has-mr-6">11</span>
+        <span>11、less命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#常用命令参数：">
+        <span class="has-mr-6">11.1</span>
+        <span>常用命令参数：</span>
+        </a></li><li>
+        <a class="is-flex" href="#实例-10">
+        <span class="has-mr-6">11.2</span>
+        <span>实例:</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/操作系统/">
+            <span class="level-start">
+                <span class="level-item">操作系统</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/操作系统/Linux/">
+            <span class="level-start">
+                <span class="level-item">Linux</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/03/14/2019-3-14-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/linux.jpg" alt="Linux常用命令(一)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time></div>
+                    <a href="/2019/03/14/2019-3-14-1/" class="has-link-black-ter is-size-6">Linux常用命令(一)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a> / <a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/03/13/first-Post/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/desert.jpg" alt="first Post">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T09:04:17.000Z">2019-03-13</time></div>
+                    <a href="/2019/03/13/first-Post/" class="has-link-black-ter is-size-6">first Post</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/入门/">
+                        <span class="tag">入门</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
     
         
 <div class="card widget">
@@ -366,7 +716,7 @@ Hello
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time></div>
                     <a href="/2019/03/14/2019-3-14-1/" class="has-link-black-ter is-size-6">Linux常用命令(一)</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>
+                        <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a> / <a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
                     </p>
                 </div>
             </div>
@@ -419,28 +769,6 @@ Hello
     </div>
 </div>
     
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/操作系统/">
-            <span class="level-start">
-                <span class="level-item">操作系统</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
         <div class="card widget">
     <div class="card-content">
         <div class="menu">
@@ -450,8 +778,8 @@ Hello
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Linux/">
-                        <span class="tag">Linux</span>
+                    <a class="tags has-addons" href="/tags/入门/">
+                        <span class="tag">入门</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -460,200 +788,6 @@ Hello
         </div>
     </div>
 </div>
-    
-    
-        <div class="column-right-shadow is-hidden-widescreen is-sticky">
-        
-            
-<div class="card widget">
-    <div class="card-content">
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Pawn">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        Pawn
-                    </p>
-                    
-                    
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level is-mobile">
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        2
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
-                关注我</a>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/cimex7">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="zhihu" href="https://www.zhihu.com/people/tian-zhen-42-66">
-                
-                <i class="fab fa-zhihu"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="weibo" href="https://weibo.com/u/5633518734">
-                
-                <i class="fab fa-weibo"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
-    </div>
-</div>
-        
-            
-        
-        </div>
-    
-</div>
-
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Pawn">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        Pawn
-                    </p>
-                    
-                    
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level is-mobile">
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        2
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
-                关注我</a>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/cimex7">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="zhihu" href="https://www.zhihu.com/people/tian-zhen-42-66">
-                
-                <i class="fab fa-zhihu"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="weibo" href="https://weibo.com/u/5633518734">
-                
-                <i class="fab fa-weibo"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
-    </div>
-</div>
-    
-        
     
     
 </div>
