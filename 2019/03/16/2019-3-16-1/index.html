@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Cimex">
 <meta property="og:description" content="SQL(Structured Query Language)是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。  MySQL是一个关系型DBMS,使用SQL语言进行操作。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-20T14:09:43.530Z">
+<meta property="og:updated_time" content="2019-03-20T14:13:07.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL的安装">
 <meta name="twitter:description" content="SQL(Structured Query Language)是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。  MySQL是一个关系型DBMS,使用SQL语言进行操作。">
@@ -154,7 +154,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 193 个字)
+                    1 分钟 读完 (大约 210 个字)
                 </span>
                 
                 
@@ -185,6 +185,8 @@
 <p><strong><em>验证是否安装成功：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tap | grep mysql</span><br></pre></td></tr></table></figure></p>
 <p><strong><em>用 gedit 修改 MySQL 的配置文件（my.cnf）：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure></p>
 <p><strong><em>打开 MySQL 服务并使用 root 用户登录：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#启动MySQL服务</span><br><span class="line">sudo service mysql start</span><br><span class="line">#使用root用户登录</span><br><span class="line">mysql -u root -p password</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>查看数据库</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>连接数据库</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use &lt;数据库名&gt;</span><br></pre></td></tr></table></figure></p>
 
         </div>
         
