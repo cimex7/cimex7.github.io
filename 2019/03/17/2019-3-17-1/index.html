@@ -7,15 +7,18 @@
 
 
 
-    <meta name="keywords" content="基础">
+    <meta name="description" content="准备1234#启动MySQL服务sudo service mysql start#使用root用户登录mysql -u root -p password">
+<meta name="keywords" content="基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="创建数据库并插入数据">
 <meta property="og:url" content="http://yoursite.com/2019/03/17/2019-3-17-1/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="准备1234#启动MySQL服务sudo service mysql start#使用root用户登录mysql -u root -p password">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-17T14:31:09.455Z">
+<meta property="og:updated_time" content="2019-03-21T06:56:38.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建数据库并插入数据">
+<meta name="twitter:description" content="准备1234#启动MySQL服务sudo service mysql start#使用root用户登录mysql -u root -p password">
 
 
 
@@ -151,7 +154,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    几秒 读完 (大约 106 个字)
                 </span>
                 
                 
@@ -169,7 +172,13 @@
             
         </h1>
         <div class="content">
-            
+            <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#启动MySQL服务</span><br><span class="line">sudo service mysql start</span><br><span class="line">#使用root用户登录</span><br><span class="line">mysql -u root -p password</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="新建数据库"><a href="#新建数据库" class="headerlink" title="新建数据库"></a>新建数据库</h2><p>首先用<code>show databases;</code>查看已有的数据库。</p>
+<p><strong><em>创建一个数据库，test_sql：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE test_sql;</span><br></pre></td></tr></table></figure></p>
+<p>再用<code>show databases;</code>查看所有的数据库，可以看到test_sql。<br><strong><em>使用刚才创建的数据库：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use test_sql;</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>查看当前数据库有几张表：</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show table;</span><br></pre></td></tr></table></figure></p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -309,7 +318,15 @@
             <h3 class="menu-label">
                 目录
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#准备">
+        <span class="has-mr-6">1</span>
+        <span>准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#新建数据库">
+        <span class="has-mr-6">1.1</span>
+        <span>新建数据库</span>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
