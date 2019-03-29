@@ -2,23 +2,18 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>MongoDB数据库和集合的基本操作 - Cimex</title>
+<title>Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="#　MongoDB 简介">
-<meta name="keywords" content="基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB数据库和集合的基本操作">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/2019-3-17-2/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Cimex">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="#　MongoDB 简介">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-27T07:57:30.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB数据库和集合的基本操作">
-<meta name="twitter:description" content="#　MongoDB 简介">
+<meta name="twitter:title" content="Cimex">
 
 
 
@@ -92,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="MongoDB数据库和集合的基本操作" height="28">
+                <img src="/images/logo.svg" alt="Cimex" height="28">
             
             </a>
         </div>
@@ -113,10 +108,6 @@
             <div class="navbar-end">
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -130,89 +121,117 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
     
     <div class="card-image">
-        <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/MongoDB.jpeg" alt="MongoDB数据库和集合的基本操作">
-        </span>
+        <a href="/2019/03/16/2019-3-16-1/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/MySql.png" alt="MySQL的安装">
+        </a>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-27T07:57:30.265Z">2019-03-27</time>
+                <time class="level-item has-text-grey" datetime="2019-03-16T14:31:09.363Z">2019-03-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MongoDB/">MongoDB</a>
+                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 745 个字)
+                    1 分钟 读完 (大约 219 个字)
                 </span>
                 
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span>次访问
-                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                MongoDB数据库和集合的基本操作
+                <a class="has-link-black-ter" href="/2019/03/16/2019-3-16-1/">MySQL的安装</a>
             
         </h1>
         <div class="content">
-            <p>#　MongoDB 简介<br><a id="more"></a></p>
-<p>##　简介<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
-<p>##　面向集合的存储<br>在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据库包含多个表；一个集合包含多个文档，类似于 MySQL 中一个表包含多条数据。</p>
-<p>可以把集合记为表，文档记为一条记录。</p>
-<p>这样命名是有原因的，因为 MongoDB 没有行列统一的表格式排列，而是采用一个大仓库的形式将所有数据包纳其中。文档也一样，它是一段自由独立的数据，受外部限制少，所以区别于关系型数据库的记录。</p>
-<p>##　虚拟机开机配置</p>
-<p>启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动，可能以下命令运行后会等一小段的时间才会启动完毕。</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongodb start</span><br></pre></td></tr></table></figure>
-<p>在命令行中敲 exit 可以退出。</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
-<li>一个 MongoDB 可以创建多个数据库</li>
-<li>使用 show dbs 可以查看所有数据库的列表</li>
-<li>执行 db 命令则可以查看当前数据库对象或者集合</li>
-<li>运行 use 命令可以连接到指定的数据库</li>
+            <ul>
+<li><p>SQL(Structured Query Language)是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。</p>
+</li>
+<li><p>MySQL是一个关系型DBMS,使用SQL语言进行操作。</p>
+</li>
 </ul>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span>mongo    # 进入到mongo命令行</span><br><span class="line"><span class="hljs-meta">&gt;</span>use test    # 连接到test数据库</span><br></pre></td></tr></table></figure>
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>文档是 MongoDB 的核心，类似于 SQLite 数据库（关系数据库）中的每一行数据。多个键及其关联的值放在一起就是文档。在 Mongodb 中使用一种类 json 的 bson 存储数据，bson 数据可以理解为在 json 的基础上添加了一些 json 中没有的数据类型。</p>
-<p>例如：</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"company":"Chenshi keji"&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="文档的逻辑联系"><a href="#文档的逻辑联系" class="headerlink" title="文档的逻辑联系"></a>文档的逻辑联系</h2><p>假设有两个文档：</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span> user文档</span><br><span class="line">&#123;</span><br><span class="line">   "name": "Tom Hanks",</span><br><span class="line">   "contact": "987654321",</span><br><span class="line">   "dob": "01-01-1991"</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#</span> address文档</span><br><span class="line">&#123;</span><br><span class="line">   "building": "22 A, Indiana Apt",</span><br><span class="line">   "pincode": 123456,</span><br><span class="line">   "city": "chengdu",</span><br><span class="line">   "state": "sichuan"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>关系 1：嵌入式关系：把 address 文档嵌入到 user 文档中</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span> 这就是嵌入式的关系</span><br><span class="line">&#123;</span><br><span class="line">   "name": "Tom Hanks",</span><br><span class="line">   "contact": "987654321",</span><br><span class="line">   "dob": "01-01-1991",</span><br><span class="line">   "address":</span><br><span class="line">   [&#123;</span><br><span class="line">   "building": "22 A, Indiana Apt",</span><br><span class="line">   "pincode": 123456,</span><br><span class="line">   "city": "chengdu",</span><br><span class="line">   "state": "sichuan"</span><br><span class="line">   &#125;,</span><br><span class="line">   &#123;</span><br><span class="line">   "building": "170 A, Acropolis Apt",</span><br><span class="line">   "pincode": 456789,</span><br><span class="line">   "city": "beijing",</span><br><span class="line">   "state": "beijing"</span><br><span class="line">   &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>关系 2：引用式关系：将两个文档分开，通过引用文档的_id 字段来建立关系</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span> 这就是引用式关系</span><br><span class="line">&#123;</span><br><span class="line">   "name": "Tom Benzamin",</span><br><span class="line">   "contact": "987654321",</span><br><span class="line">   "dob": "01-01-1991",</span><br><span class="line">   "address_ids": [</span><br><span class="line">      ObjectId("52ffc4a5d85242602e000000")    #对应address文档的id字段</span><br><span class="line">   ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在实际应用的时候，嵌入式关系比较适合一对一的关系，引用式关系比较适合一对多或者多对多的情况。</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合就是一组文档的组合，就相当于是关系数据库中的表，在 MongoDB 中可以存储不同的文档结构的文档。</p>
-<p>例如：</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"company":"Chenshi keji"&#125; &#123;"people":"man","name":"peter"&#125;</span><br></pre></td></tr></table></figure>
-
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/基础/">基础</a>
+                <a class="button is-size-7 is-light" href="/2019/03/16/2019-3-16-1/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/03/15/2019-3-15-1/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/linux.jpg" alt="Linux常用命令(二)">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-15T14:06:57.945Z">2019-03-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 245 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/15/2019-3-15-1/">Linux常用命令(二)</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h1><p>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。<br></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/03/15/2019-3-15-1/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
         
     </div>
 </div>
@@ -221,28 +240,140 @@
 
 
 
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/03/14/2019-3-14-1/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/linux.jpg" alt="Linux常用命令(一)">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 分钟 读完 (大约 2038 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/14/2019-3-14-1/">Linux常用命令(一)</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h1><p>就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等<br></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/03/14/2019-3-14-1/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/03/13/first-Post/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/desert.jpg" alt="first Post">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-13T09:04:17.000Z">2019-03-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 24 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/13/first-Post/">first Post</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hexo+<a href="https://github.com/cimex7" target="_blank" rel="noopener">Github</a>搭建.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/03/13/first-Post/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
 <div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/27/TCP-IP/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">TCP三次握手四次挥手</span>
-            </a>
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/">上一页</a>
         </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/23/2019-3-23-1/">
-                <span class="level-item">搭建Django环境</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/page/3/">下一页</a>
         </div>
-        
-    </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
 </div>
                 
 
@@ -334,37 +465,6 @@
 </div>
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#基本概念">
-        <span class="has-mr-6">1</span>
-        <span>基本概念</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#数据库">
-        <span class="has-mr-6">1.1</span>
-        <span>数据库</span>
-        </a></li><li>
-        <a class="is-flex" href="#文档">
-        <span class="has-mr-6">1.2</span>
-        <span>文档</span>
-        </a></li><li>
-        <a class="is-flex" href="#文档的逻辑联系">
-        <span class="has-mr-6">1.3</span>
-        <span>文档的逻辑联系</span>
-        </a></li><li>
-        <a class="is-flex" href="#集合">
-        <span class="has-mr-6">1.4</span>
-        <span>集合</span>
-        </a></li></ul></li></ul>
-        </div>
-    </div>
-</div>
-
     
         
 <div class="card widget">
@@ -781,7 +881,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="MongoDB数据库和集合的基本操作" height="28">
+                    <img src="/images/logo.svg" alt="Cimex" height="28">
                 
                 </a>
                 <p class="is-size-7">
