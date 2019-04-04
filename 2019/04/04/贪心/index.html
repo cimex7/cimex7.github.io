@@ -2,18 +2,22 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: 数据结构和算法 - Cimex</title>
+<title>贪心 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/categories/数据结构和算法/index.html">
+    <meta name="description" content="简介贪心算法（greedy algorithm)是一种短视的算法，每一个选择都是独立的，都是当前环境下能采取的最佳策略。 实现步骤1.创建数学模型来描述问题。2.把求解的问题分成若干个子问题。3.对每一子问题求解，得到子问题的局部最优解。4.把子问题的解局部最优解合成原来解问题的一个解。 例子最小生成树的算法：Prim MST、Kruskal MST单源最短路径：Djikstra’s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/贪心/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="简介贪心算法（greedy algorithm)是一种短视的算法，每一个选择都是独立的，都是当前环境下能采取的最佳策略。 实现步骤1.创建数学模型来描述问题。2.把求解的问题分成若干个子问题。3.对每一子问题求解，得到子问题的局部最优解。4.把子问题的解局部最优解合成原来解问题的一个解。 例子最小生成树的算法：Prim MST、Kruskal MST单源最短路径：Djikstra’s">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-04T14:22:38.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="贪心">
+<meta name="twitter:description" content="简介贪心算法（greedy algorithm)是一种短视的算法，每一个选择都是独立的，都是当前环境下能采取的最佳策略。 实现步骤1.创建数学模型来描述问题。2.把求解的问题分成若干个子问题。3.对每一子问题求解，得到子问题的局部最优解。4.把子问题的解局部最优解合成原来解问题的一个解。 例子最小生成树的算法：Prim MST、Kruskal MST单源最短路径：Djikstra’s">
 
 
 
@@ -80,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="贪心" height="28">
             
             </a>
         </div>
@@ -101,6 +105,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -115,40 +123,28 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">数据结构和算法</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/04/03/贪心/" class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
-        </a>
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-03T15:04:32.872Z">2019-04-03</time>
+                <time class="level-item has-text-grey" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据结构和算法/贪心/">贪心</a>
+                <a class="has-link-grey -link" href="/categories/算法/">算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 45 个字)
+                    1 分钟 读完 (大约 145 个字)
                 </span>
                 
                 
@@ -157,11 +153,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/03/贪心/">贪心</a>
+                贪心
             
         </h1>
         <div class="content">
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>贪心算法（greedy algorithms)是一种短视的算法，<br>每一个选择都是独立的，都是当前环境下能采取的最佳策略。</p>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>贪心算法（greedy algorithm)是一种短视的算法，<br>每一个选择都是独立的，都是当前环境下能采取的最佳策略。</p>
+<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><p>1.创建数学模型来描述问题。<br>2.把求解的问题分成若干个子问题。<br>3.对每一子问题求解，得到子问题的局部最优解。<br>4.把子问题的解局部最优解合成原来解问题的一个解。</p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>最小生成树的算法：Prim MST、Kruskal MST<br>单源最短路径：Djikstra’s</p>
 
         </div>
         
@@ -174,123 +172,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/03/交换排序/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-03T14:58:23.738Z">2019-04-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 288 个字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/04/交换排序/">
+                <span class="level-item">交换排序</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/03/交换排序/">交换排序</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/03/交换排序/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/03/插入排序/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-03T14:58:23.709Z">2019-04-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 153 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/03/插入排序/">插入排序</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h1>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/03/插入排序/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -384,6 +278,29 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#简介">
+        <span class="has-mr-6">1</span>
+        <span>简介</span>
+        </a></li><li>
+        <a class="is-flex" href="#实现步骤">
+        <span class="has-mr-6">2</span>
+        <span>实现步骤</span>
+        </a></li><li>
+        <a class="is-flex" href="#例子">
+        <span class="has-mr-6">3</span>
+        <span>例子</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -450,15 +367,15 @@
                 <span class="level-item tag">2</span>
             </span>
         </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/数据结构和算法/">
+        <a class="level is-marginless" href="/categories/算法/">
             <span class="level-start">
-                <span class="level-item">数据结构和算法</span>
+                <span class="level-item">算法</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">3</span>
             </span>
         </a><ul><li>
-        <a class="level is-marginless" href="/categories/数据结构和算法/排序/">
+        <a class="level is-marginless" href="/categories/算法/排序/">
             <span class="level-start">
                 <span class="level-item">排序</span>
             </span>
@@ -466,7 +383,7 @@
                 <span class="level-item tag">2</span>
             </span>
         </a></li><li>
-        <a class="level is-marginless" href="/categories/数据结构和算法/贪心/">
+        <a class="level is-marginless" href="/categories/算法/贪心/">
             <span class="level-start">
                 <span class="level-item">贪心</span>
             </span>
@@ -548,7 +465,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/贪心/" class="media-left">
+            <a href="/2019/04/04/贪心/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
@@ -556,10 +473,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T15:04:32.872Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/贪心/" class="has-link-black-ter is-size-6">贪心</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/贪心/">贪心</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -567,7 +484,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/交换排序/" class="media-left">
+            <a href="/2019/04/04/交换排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
@@ -575,10 +492,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T14:58:23.738Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:12:49.897Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -586,7 +503,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/插入排序/" class="media-left">
+            <a href="/2019/04/04/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -594,10 +511,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T14:58:23.709Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:12:49.877Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -700,7 +617,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/贪心/" class="media-left">
+            <a href="/2019/04/04/贪心/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
@@ -708,10 +625,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T15:04:32.872Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/贪心/" class="has-link-black-ter is-size-6">贪心</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/贪心/">贪心</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -719,7 +636,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/交换排序/" class="media-left">
+            <a href="/2019/04/04/交换排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
@@ -727,10 +644,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T14:58:23.738Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:12:49.897Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -738,7 +655,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/03/插入排序/" class="media-left">
+            <a href="/2019/04/04/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -746,10 +663,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T14:58:23.709Z">2019-04-03</time></div>
-                    <a href="/2019/04/03/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:12:49.877Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -844,7 +761,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="贪心" height="28">
                 
                 </a>
                 <p class="is-size-7">
