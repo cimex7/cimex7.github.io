@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/04/04/交换排序/交换排序.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/04/04/交换排序/快速排序.jpg">
-<meta property="og:updated_time" content="2019-04-04T14:12:49.898Z">
+<meta property="og:updated_time" content="2019-04-06T14:40:23.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="交换排序">
 <meta name="twitter:description" content="冒泡排序">
@@ -162,7 +162,8 @@
         </h1>
         <div class="content">
             <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><a id="more"></a>
-<p>伪码<br><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BubbleSort</span><span class="hljs-params">(ElemType A[], <span class="hljs-keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; i&lt;n<span class="hljs-number">-1</span>; ++i)&#123;</span><br><span class="line">    flag=<span class="hljs-literal">false</span>;                     <span class="hljs-comment">//交换是否发生的标志 </span></span><br><span class="line">        <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; j&gt;i; --j)&#123;        <span class="hljs-comment">//一趟冒泡过程</span></span><br><span class="line">        <span class="hljs-keyword">if</span>(A[j<span class="hljs-number">-1</span>].key&gt;A[j].key)&#123;    <span class="hljs-comment">//若为逆序</span></span><br><span class="line">            swap(A[j<span class="hljs-number">-1</span>],A[j]);      <span class="hljs-comment">//交换</span></span><br><span class="line">            flag=<span class="hljs-literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(flag==<span class="hljs-literal">false</span>)</span><br><span class="line">            <span class="hljs-keyword">return</span>;                 <span class="hljs-comment">//遍历没有发生，说明表已有序</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>伪码</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BubbleSort</span><span class="hljs-params">(ElemType A[], <span class="hljs-keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; i&lt;n<span class="hljs-number">-1</span>; ++i)&#123;</span><br><span class="line">    flag=<span class="hljs-literal">false</span>;                     <span class="hljs-comment">//交换是否发生的标志</span></span><br><span class="line">        <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; j&gt;i; --j)&#123;        <span class="hljs-comment">//一趟冒泡过程</span></span><br><span class="line">        <span class="hljs-keyword">if</span>(A[j<span class="hljs-number">-1</span>].key&gt;A[j].key)&#123;    <span class="hljs-comment">//若为逆序</span></span><br><span class="line">            swap(A[j<span class="hljs-number">-1</span>],A[j]);      <span class="hljs-comment">//交换</span></span><br><span class="line">            flag=<span class="hljs-literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(flag==<span class="hljs-literal">false</span>)</span><br><span class="line">            <span class="hljs-keyword">return</span>;                 <span class="hljs-comment">//遍历没有发生，说明表已有序</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -179,9 +180,8 @@
 </tbody>
 </table>
 <h1 id="中值排序"><a href="#中值排序" class="headerlink" title="中值排序"></a>中值排序</h1><img src="/2019/04/04/交换排序/交换排序.jpg">
-<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">   * 在线性时间，根据给定的中枢值重新组合子序列ar[left，right]，</span></span><br><span class="line"><span class="hljs-comment">   * 将中枢值存储在其正确的位置store，确保所有在子序列ar[left, store)中的</span></span><br><span class="line"><span class="hljs-comment">   * 元素&lt;=pivot并且所有在ar[store+1, right]中的元素&gt;pivot。</span></span><br><span class="line"><span class="hljs-comment">   */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span> <span class="hljs-params">(<span class="hljs-keyword">void</span> **ar, <span class="hljs-keyword">int</span>(*cmp)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *),</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">    nt left, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> pivotIndex)</span> </span>&#123;</span><br><span class="line">	nt idx, store;</span><br><span class="line">	<span class="hljs-keyword">void</span> *pivot = ar[pivotIndex];</span><br><span class="line">	<span class="hljs-comment">/*将中枢值移动到数组结尾。*/</span></span><br><span class="line">	<span class="hljs-keyword">void</span> *tmp = ar[right];</span><br><span class="line">	ar[right] = ar[pivotIndex];</span><br><span class="line">	ar[pivotIndex] = tmp;</span><br><span class="line">	<span class="hljs-comment">/*所有小于等于中枢值的元素都会移动到数组的前面，然后将中枢值插在它们后面。*/</span></span><br><span class="line">	store = left;</span><br><span class="line">	<span class="hljs-keyword">for</span> (idx = left; idx &lt; right; idx++) &#123;</span><br><span class="line">		<span class="hljs-keyword">if</span> (cmp(ar[idx], pivot) &lt;= <span class="hljs-number">0</span>) &#123;</span><br><span class="line">			tmp = ar[idx];</span><br><span class="line">			ar[idx] = ar[store];</span><br><span class="line">			ar[store] = tmp;</span><br><span class="line">			store++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	mp = ar[right];</span><br><span class="line">	ar[right] = ar[store];</span><br><span class="line">	ar[store] = tmp;</span><br><span class="line">	<span class="hljs-keyword">return</span> store;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">   * 在线性时间，根据给定的中枢值重新组合子序列ar[left，right]，</span></span><br><span class="line"><span class="hljs-comment">   * 将中枢值存储在其正确的位置store，确保所有在子序列ar[left, store)中的</span></span><br><span class="line"><span class="hljs-comment">   * 元素&lt;=pivot并且所有在ar[store+1, right]中的元素&gt;pivot。</span></span><br><span class="line"><span class="hljs-comment">   */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span> <span class="hljs-params">(<span class="hljs-keyword">void</span> **ar, <span class="hljs-keyword">int</span>(*cmp)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *),</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">  nt left, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> pivotIndex)</span> </span>&#123;</span><br><span class="line">  nt idx, store;</span><br><span class="line">  <span class="hljs-keyword">void</span> *pivot = ar[pivotIndex];</span><br><span class="line">  <span class="hljs-comment">/*将中枢值移动到数组结尾。*/</span></span><br><span class="line">  <span class="hljs-keyword">void</span> *tmp = ar[right];</span><br><span class="line">  ar[right] = ar[pivotIndex];</span><br><span class="line">  ar[pivotIndex] = tmp;</span><br><span class="line"><span class="hljs-comment">/*所有小于等于中枢值的元素都会移动到数组的前面，然后将中枢值插在它们后面。*/</span></span><br><span class="line">  store = left;</span><br><span class="line">  <span class="hljs-keyword">for</span> (idx = left; idx &lt; right; idx++) &#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (cmp(ar[idx], pivot) &lt;= <span class="hljs-number">0</span>) &#123;</span><br><span class="line">      tmp = ar[idx];</span><br><span class="line">      ar[idx] = ar[store];</span><br><span class="line">      ar[store] = tmp;</span><br><span class="line">      store++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  mp = ar[right];</span><br><span class="line">  ar[right] = ar[store];</span><br><span class="line">  ar[store] = tmp;</span><br><span class="line">  <span class="hljs-keyword">return</span> store;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><img src="/2019/04/04/交换排序/快速排序.jpg">
-
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -258,7 +258,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        11
+                        12
                     </p>
                 </div>
             </div>
@@ -268,7 +268,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        13
+                        14
                     </p>
                 </div>
             </div>
@@ -441,9 +441,17 @@
                 <span class="level-item">计算机网络</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a><ul><li>
+        <a class="level is-marginless" href="/categories/计算机网络/DNS/">
+            <span class="level-start">
+                <span class="level-item">DNS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/计算机网络/TCP-IP/">
             <span class="level-start">
                 <span class="level-item">TCP/IP</span>
@@ -475,7 +483,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/基础/">
                         <span class="tag">基础</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -507,6 +515,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/06/DNS/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -584,25 +611,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/03/27/TCP-IP/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/TCP-IP模型.jpg" alt="TCP三次握手四次挥手">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-27T08:00:48.850Z">2019-03-27</time></div>
-                    <a href="/2019/03/27/TCP-IP/" class="has-link-black-ter is-size-6">TCP三次握手四次挥手</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/TCP-IP/">TCP/IP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -621,7 +629,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -662,6 +670,25 @@
         
         <article class="media">
             
+            <a href="/2019/04/06/DNS/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/04/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
@@ -736,25 +763,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/03/27/TCP-IP/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/TCP-IP模型.jpg" alt="TCP三次握手四次挥手">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-27T08:00:48.850Z">2019-03-27</time></div>
-                    <a href="/2019/03/27/TCP-IP/" class="has-link-black-ter is-size-6">TCP三次握手四次挥手</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/TCP-IP/">TCP/IP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -773,7 +781,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
