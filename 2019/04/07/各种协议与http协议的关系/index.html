@@ -2,23 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Linux常用命令(一) - Cimex</title>
+<title>各种协议与http协议的关系 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+    <meta name="description" content="从输入url到页面加载的过程中发生了什么？">
 <meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令(一)">
-<meta property="og:url" content="http://yoursite.com/2019/03/14/2019-3-14-1/index.html">
+<meta property="og:title" content="各种协议与http协议的关系">
+<meta property="og:url" content="http://yoursite.com/2019/04/07/各种协议与http协议的关系/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+<meta property="og:description" content="从输入url到页面加载的过程中发生了什么？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-16T14:55:31.104Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/07/各种协议与http协议的关系/整个过程.jpg">
+<meta property="og:updated_time" content="2019-04-07T15:14:36.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用命令(一)">
-<meta name="twitter:description" content="ls命令就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等">
+<meta name="twitter:title" content="各种协议与http协议的关系">
+<meta name="twitter:description" content="从输入url到页面加载的过程中发生了什么？">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/07/各种协议与http协议的关系/整个过程.jpg">
 
 
 
@@ -85,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Linux常用命令(一)" height="28">
+                <img src="/images/logo.svg" alt="各种协议与http协议的关系" height="28">
             
             </a>
         </div>
@@ -125,27 +127,21 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
-    <div class="card-image">
-        <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/linux.jpg" alt="Linux常用命令(一)">
-        </span>
-    </div>
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time>
+                <time class="level-item has-text-grey" datetime="2019-04-07T15:10:56.281Z">2019-04-07</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
+                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    14 分钟 读完 (大约 2038 个字)
+                    几秒 读完 (大约 95 个字)
                 </span>
                 
                 
@@ -154,144 +150,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Linux常用命令(一)
+                各种协议与http协议的关系
             
         </h1>
         <div class="content">
-            <h1 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h1><p>就是list的缩写，通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等<br><a id="more"></a></p>
-<h2 id="常用参数搭配："><a href="#常用参数搭配：" class="headerlink" title="常用参数搭配："></a>常用参数搭配：</h2><p>ls -a 列出目录所有文件，包含以.开始的隐藏文件</p>
-<p>ls -A 列出除.及..的其它文件</p>
-<p>ls -r 反序排列</p>
-<p>ls -t 以文件修改时间排序</p>
-<p>ls -S 以文件大小排序</p>
-<p>ls -h 以易读大小显示</p>
-<p>ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h2><p>(1) 按易读方式按时间反序排序，并显示文件详细信息</p>
-<pre><code>ls -lhrt
-</code></pre><p>(2) 按大小反序显示文件详细信息</p>
-<pre><code>ls -lrS
-</code></pre><p>(3)列出当前目录中所有以“t”开头的目录的详细内容</p>
-<pre><code>ls -l t*
-</code></pre><p>(4) 列出文件绝对路径（不包含隐藏文件）</p>
-<pre><code>ls | sed &quot;s:^:`pwd`/:&quot;
-</code></pre><p>(5) 列出文件绝对路径（包含隐藏文件）</p>
-<pre><code>find $pwd -maxdepth 1 | xargs ls -ld
-</code></pre><h1 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h1><p>(changeDirectory),命令语法：cd [目录名]。说明：切换当前目录至dirName</p>
-<h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例:"></a>实例:</h2><p>（1）进入要目录</p>
-<pre><code>cd /
-</code></pre><p>（2）进入”家”目录</p>
-<pre><code>cd ~
-</code></pre><p>（3）进入上一次工作路径</p>
-<pre><code>cd -
-</code></pre><p>（4）把上个命令的参数作为cd参数使用。</p>
-<pre><code>cd !$
-</code></pre><h1 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h1><p>查看当前工作目录路径</p>
-<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例:"></a>实例:</h2><p>（1）查看当前路径</p>
-<pre><code>pwd
-</code></pre><p>（2）查看软链接的实际路径</p>
-<pre><code>pwd -P
-</code></pre><h1 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h1><p>创建文件夹</p>
-<h2 id="可用选项："><a href="#可用选项：" class="headerlink" title="可用选项："></a>可用选项：</h2><p>-m: 对新建目录设置存取权限,也可以用chmod命令设置;</p>
-<p>-p: 可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那 些尚不在的目录,即一次可以建立多个目录;</p>
-<h2 id="实例-3"><a href="#实例-3" class="headerlink" title="实例:"></a>实例:</h2><p>（1）当前工作目录下创建名为t的文件夹</p>
-<pre><code>mkdir t
-</code></pre><p>（2）在tmp目录下创建路径为test/t1/t的目录，若不存在，则创建</p>
-<pre><code>mkdir -p /tmp/test/t1/t
-</code></pre><h1 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h1><p>删除一个目录中的一个或多个文件或目录，如果没有使用- r选项，则rm不会删除目录。如果使用 rm 来删除文件，通常仍可以将该文件恢复原状</p>
-<p>rm [选项] 文件…</p>
-<h2 id="实例-4"><a href="#实例-4" class="headerlink" title="实例:"></a>实例:</h2><p>（1）删除任何.log文件；删除前逐一询问确认</p>
-<pre><code>rm -i *.log
-</code></pre><p>（2）删除test子目录及子目录中所有档案删除,并且不用一一确认</p>
-<pre><code>rm -rf test
-</code></pre><p>（3）删除以-f开头的文件</p>
-<pre><code>rm -- -f*
-</code></pre><h1 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h1><p>从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对其父目录的写权限。<br>（注意：不能删除非空目录）</p>
-<h2 id="实例-5"><a href="#实例-5" class="headerlink" title="实例:"></a>实例:</h2><p>（1）当parent子目录被删除后使它也成为空目录的话，则顺便一并删除</p>
-<pre><code>rmdir -p parent/child/child11
-</code></pre><h1 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h1><p>移动文件或修改文件名，根据第二参数类型（如目录，则移动文件；如为文件则重命令该文件）。<br>当第二个参数为目录时，可刚多个文件以空格分隔作为第一参数，移动多个文件到参数2指定的目录中</p>
-<h2 id="实例-6"><a href="#实例-6" class="headerlink" title="实例:"></a>实例:</h2><p>（1）将文件test.log重命名为test1.txt</p>
-<pre><code>mv test.log test1.txt
-</code></pre><p>（2）将文件log1.txt,log2.txt,log3.txt移动到根的test3目录中</p>
-<pre><code>mv llog1.txt log2.txt log3.txt /test3
-</code></pre><p>（3）将文件file1改名为file2，如果file2已经存在，则询问是否覆盖</p>
-<pre><code>mv -i log1.txt log2.txt
-</code></pre><p>（4）移动当前文件夹下的所有文件到上一级目录</p>
-<pre><code>mv * ../
-</code></pre><h1 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h1><p>将源文件复制至目标文件，或将多个源文件复制至目标目录。<br>注意：命令行复制，如果目标文件已经存在会提示是否覆盖，而在shell脚本中，如果不加-i参数，则不会提示，而是直接覆盖！</p>
-<p>-i 提示</p>
-<p>-r 复制目录及目录内所有项目</p>
-<p>-a 复制的文件与原文件时间一样</p>
-<h2 id="实例-7"><a href="#实例-7" class="headerlink" title="实例:"></a>实例:</h2><p>（1）复制a.txt到test目录下，保持原文件时间,如果原文件存在提示是否覆盖</p>
-<pre><code>cp -ai a.txt test
-</code></pre><p>（2）为a.txt建议一个链接（快捷方式）</p>
-<pre><code>cp -s a.txt link_a.txt
-</code></pre><h1 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h1><h2 id="cat主要有三大功能："><a href="#cat主要有三大功能：" class="headerlink" title="cat主要有三大功能："></a>cat主要有三大功能：</h2><p>1.一次显示整个文件:cat filename<br>2.从键盘创建一个文件:cat &gt; filename 只能创建新文件,不能编辑已有文件.<br>3.将几个文件合并为一个文件:cat file1 file2 &gt; file</p>
-<p>-b对非空输出行号<br>-n输出所有行号</p>
-<h2 id="实例-8"><a href="#实例-8" class="headerlink" title="实例:"></a>实例:</h2><p>（1）把 log2012.log 的文件内容加上行号后输入 log2013.log 这个文件里</p>
-<pre><code>cat -n log2012.log log2013.log
-</code></pre><p>（2）把 log2012.log 和 log2013.log 的文件内容加上行号（空白行不加）之后将内容附加到 log.log 里</p>
-<pre><code>cat -b log2012.log log2013.log log.log
-</code></pre><p>（3）使用here doc生成新文件</p>
-<pre><code>cat &gt;log.txt &lt;&lt;EOF
-</code></pre><blockquote>
-<p>Hello<br>World<br>PWD=$(pwd)<br>EOF</p>
-</blockquote>
-<p>ls -l log.txt<br>cat log.txt<br>Hello<br>World</p>
-<p>PWD=/opt/soft/test</p>
-<p>（4）反向列示</p>
-<pre><code>tac log.txt
-PWD=/opt/soft/test
-World
-Hello
-</code></pre><h1 id="more命令"><a href="#more命令" class="headerlink" title="more命令"></a>more命令</h1><p>功能类似于cat, more会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示</p>
-<h2 id="命令参数："><a href="#命令参数：" class="headerlink" title="命令参数："></a>命令参数：</h2><p>+n      从笫n行开始显示</p>
-<p>-n       定义屏幕大小为n行</p>
-<p>+/pattern 在每个档案显示前搜寻该字串（pattern），然后从该字串前两行之后开始显示</p>
-<p>-c       从顶部清屏，然后显示</p>
-<p>-d       提示“Press space to continue，’q’ to quit（按空格键继续，按q键退出）”，禁用响铃功能</p>
-<p>-l        忽略Ctrl+l（换页）字符</p>
-<p>-p       通过清除窗口而不是滚屏来对文件进行换页，与-c选项相似</p>
-<p>-s       把连续的多个空行显示为一行</p>
-<p>-u       把文件内容中的下画线去掉</p>
-<p>##　常用操作命令：<br>Enter    向下n行，需要定义。默认为1行</p>
-<p>Ctrl+F   向下滚动一屏</p>
-<p>空格键  向下滚动一屏</p>
-<p>Ctrl+B  返回上一屏</p>
-<p>=       输出当前行的行号</p>
-<p>：f     输出文件名和当前行的行号</p>
-<p>V      调用vi编辑器</p>
-<p>!命令   调用Shell，并执行命令</p>
-<p>q       退出more</p>
-<h2 id="实例-9"><a href="#实例-9" class="headerlink" title="实例:"></a>实例:</h2><p>（1）显示文件中从第3行起的内容</p>
-<pre><code>more +3 text.txt
-</code></pre><p>（2）在所列出文件目录详细信息，借助管道使每次显示5行</p>
-<pre><code>ls -l | more -5
-</code></pre><p>按空格显示下5行</p>
-<h1 id="less命令"><a href="#less命令" class="headerlink" title="less命令"></a>less命令</h1><p>less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。</p>
-<h2 id="常用命令参数："><a href="#常用命令参数：" class="headerlink" title="常用命令参数："></a>常用命令参数：</h2><p>i  忽略搜索时的大小写</p>
-<p>-N  显示每行的行号</p>
-<p>-o  &lt;文件名&gt; 将less 输出的内容在指定文件中保存起来</p>
-<p>-s  显示连续空行为一行</p>
-<p>/字符串：向下搜索“字符串”的功能</p>
-<p>?字符串：向上搜索“字符串”的功能</p>
-<p>n：重复前一个搜索（与 / 或 ? 有关）</p>
-<p>N：反向重复前一个搜索（与 / 或 ? 有关）</p>
-<p>-x &lt;数字&gt; 将“tab”键显示为规定的数字空格</p>
-<p>b  向后翻一页</p>
-<p>d  向后翻半页</p>
-<p>h  显示帮助界面</p>
-<p>Q  退出less 命令</p>
-<p>u  向前滚动半页</p>
-<p>y  向前滚动一行</p>
-<p>空格键 滚动一行</p>
-<p>回车键 滚动一页</p>
-<p>[pagedown]： 向下翻动一页</p>
-<p>[pageup]：   向上翻动一页</p>
-<h2 id="实例-10"><a href="#实例-10" class="headerlink" title="实例:"></a>实例:</h2><p>（1）ps查看进程信息并通过less分页显示</p>
-<pre><code>ps -aux | less -N
-</code></pre><p>（2）查看多个文件</p>
-<pre><code>ess 1.log 2.log
-</code></pre><p>可以使用n查看下一个，使用p查看前一个</p>
+            <h1 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h1><a id="more"></a>
+<p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><img src="/2019/04/07/各种协议与http协议的关系/整个过程.jpg">
 
         </div>
         
@@ -316,13 +181,13 @@ Hello
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/15/2019-3-15-1/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Linux常用命令(二)</span>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/06/DNS/">
+                <span class="level-item">DNS</span>
+                <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
-        
         
     </div>
 </div>
@@ -426,114 +291,14 @@ Hello
                 目录
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#ls命令">
+        <a class="is-flex" href="#从输入url到页面加载的过程中发生了什么？">
         <span class="has-mr-6">1</span>
-        <span>ls命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#常用参数搭配：">
-        <span class="has-mr-6">1.1</span>
-        <span>常用参数搭配：</span>
+        <span>从输入url到页面加载的过程中发生了什么？</span>
         </a></li><li>
-        <a class="is-flex" href="#实例">
-        <span class="has-mr-6">1.2</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#cd命令">
+        <a class="is-flex" href="#示例">
         <span class="has-mr-6">2</span>
-        <span>cd命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-1">
-        <span class="has-mr-6">2.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#pwd命令">
-        <span class="has-mr-6">3</span>
-        <span>pwd命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-2">
-        <span class="has-mr-6">3.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#mkdir命令">
-        <span class="has-mr-6">4</span>
-        <span>mkdir命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#可用选项：">
-        <span class="has-mr-6">4.1</span>
-        <span>可用选项：</span>
-        </a></li><li>
-        <a class="is-flex" href="#实例-3">
-        <span class="has-mr-6">4.2</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#rm命令">
-        <span class="has-mr-6">5</span>
-        <span>rm命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-4">
-        <span class="has-mr-6">5.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#rmdir命令">
-        <span class="has-mr-6">6</span>
-        <span>rmdir命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-5">
-        <span class="has-mr-6">6.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#mv命令">
-        <span class="has-mr-6">7</span>
-        <span>mv命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-6">
-        <span class="has-mr-6">7.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#cp命令">
-        <span class="has-mr-6">8</span>
-        <span>cp命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#实例-7">
-        <span class="has-mr-6">8.1</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#cat命令">
-        <span class="has-mr-6">9</span>
-        <span>cat命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#cat主要有三大功能：">
-        <span class="has-mr-6">9.1</span>
-        <span>cat主要有三大功能：</span>
-        </a></li><li>
-        <a class="is-flex" href="#实例-8">
-        <span class="has-mr-6">9.2</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#more命令">
-        <span class="has-mr-6">10</span>
-        <span>more命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#命令参数：">
-        <span class="has-mr-6">10.1</span>
-        <span>命令参数：</span>
-        </a></li><li>
-        <a class="is-flex" href="#实例-9">
-        <span class="has-mr-6">10.2</span>
-        <span>实例:</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#less命令">
-        <span class="has-mr-6">11</span>
-        <span>less命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#常用命令参数：">
-        <span class="has-mr-6">11.1</span>
-        <span>常用命令参数：</span>
-        </a></li><li>
-        <a class="is-flex" href="#实例-10">
-        <span class="has-mr-6">11.2</span>
-        <span>实例:</span>
-        </a></li></ul></li></ul>
+        <span>示例</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -1014,7 +779,7 @@ Hello
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Linux常用命令(一)" height="28">
+                    <img src="/images/logo.svg" alt="各种协议与http协议的关系" height="28">
                 
                 </a>
                 <p class="is-size-7">
