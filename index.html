@@ -117,6 +117,53 @@
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
     <div class="card">
     
+    <div class="card-image">
+        <a href="/2019/04/10/图片转字符/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/" alt="图片转字符">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 197 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/10/图片转字符/">图片转字符</a>
+            
+        </h1>
+        <div class="content">
+            <a id="more"></a>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image</span><br><span class="line"><span class="hljs-keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="hljs-string">'file'</span>)     <span class="hljs-comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="hljs-string">'-o'</span>, <span class="hljs-string">'--output'</span>)   <span class="hljs-comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="hljs-string">'--width'</span>, type = int, default = <span class="hljs-number">80</span>) <span class="hljs-comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="hljs-string">'--height'</span>, type = int, default = <span class="hljs-number">80</span>) <span class="hljs-comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = list(<span class="hljs-string">"$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\"^`'. "</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_char</span><span class="hljs-params">(r,g,b,alpha = <span class="hljs-number">256</span>)</span>:</span></span><br><span class="line">    <span class="hljs-keyword">if</span> alpha == <span class="hljs-number">0</span>:</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">' '</span></span><br><span class="line">    length = len(ascii_char)</span><br><span class="line">    gray = int(<span class="hljs-number">0.2126</span> * r + <span class="hljs-number">0.7152</span> * g + <span class="hljs-number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="hljs-number">256.0</span> + <span class="hljs-number">1</span>)/length</span><br><span class="line">    <span class="hljs-keyword">return</span> ascii_char[int(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.open(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="hljs-string">""</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(HEIGHT):</span><br><span class="line">        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="hljs-string">'\n'</span></span><br><span class="line"></span><br><span class="line">    print(txt)</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">#字符画输出到文件</span></span><br><span class="line">    <span class="hljs-keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="hljs-keyword">with</span> open(OUTPUT,<span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="hljs-keyword">else</span>:</span><br><span class="line">        <span class="hljs-keyword">with</span> open(<span class="hljs-string">"output.txt"</span>,<span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -144,7 +191,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h1>
+            <h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2>
         </div>
         
         
@@ -333,64 +380,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/04/贪心/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/算法/">算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 146 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/04/贪心/">贪心</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>贪心算法（greedy algorithm)是一种短视的算法，<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/04/贪心/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -446,7 +435,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        13
+                        14
                     </p>
                 </div>
             </div>
@@ -683,6 +672,25 @@
         
         <article class="media">
             
+            <a href="/2019/04/10/图片转字符/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
+                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
@@ -757,25 +765,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/04/贪心/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/贪心/" class="has-link-black-ter is-size-6">贪心</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -794,7 +783,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -835,6 +824,25 @@
         
         <article class="media">
             
+            <a href="/2019/04/10/图片转字符/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
+                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
@@ -909,25 +917,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/04/贪心/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:22:38.927Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/贪心/" class="has-link-black-ter is-size-6">贪心</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -946,7 +935,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
