@@ -119,7 +119,7 @@
     
     <div class="card-image">
         <a href="/2019/03/17/2019-3-17-1/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/MySql.png" alt="创建数据库并插入数据">
+            <img class="thumbnail" src="/gallery/MySql.png" alt="数据库操作">
         </a>
     </div>
     
@@ -127,7 +127,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-17T14:24:46.199Z">2019-03-17</time>
+                <time class="level-item has-text-grey" datetime="2019-03-16T16:00:00.000Z">2019-03-17</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
@@ -137,7 +137,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 106 个字)
+                    1 分钟 读完 (大约 130 个字)
                 </span>
                 
                 
@@ -146,21 +146,14 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/03/17/2019-3-17-1/">创建数据库并插入数据</a>
+                <a class="has-link-black-ter" href="/2019/03/17/2019-3-17-1/">数据库操作</a>
             
         </h1>
         <div class="content">
-            <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#启动MySQL服务</span><br><span class="line">sudo service mysql start</span><br><span class="line">#使用root用户登录</span><br><span class="line">mysql -u root -p password</span><br></pre></td></tr></table></figure>
+            <a id="more"></a>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查看当前数据库</span></span><br><span class="line">    <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DATABASE</span>();</span><br><span class="line"><span class="hljs-comment">-- 显示当前时间、用户名、数据库版本</span></span><br><span class="line">    <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">now</span>(), <span class="hljs-keyword">user</span>(), <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-comment">-- 创建库</span></span><br><span class="line">    <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span>[ <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] 数据库名 数据库选项</span><br><span class="line">    数据库选项：</span><br><span class="line">        <span class="hljs-built_in">CHARACTER</span> <span class="hljs-keyword">SET</span> charset_name</span><br><span class="line">        <span class="hljs-keyword">COLLATE</span> collation_name</span><br><span class="line"><span class="hljs-comment">-- 查看已有库</span></span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">DATABASES</span>[ <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'PATTERN'</span>]</span><br><span class="line"><span class="hljs-comment">-- 查看当前库信息</span></span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> 数据库名</span><br><span class="line"><span class="hljs-comment">-- 修改库的选项信息</span></span><br><span class="line">    <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">DATABASE</span> 库名 选项信息</span><br><span class="line"><span class="hljs-comment">-- 删除库</span></span><br><span class="line">    <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span>[ <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span>] 数据库名</span><br><span class="line">        同时删除该数据库相关的目录及其目录内容</span><br></pre></td></tr></table></figure>
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/17/2019-3-17-1/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -185,7 +178,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-16T14:31:09.363Z">2019-03-16</time>
+                <time class="level-item has-text-grey" datetime="2019-03-15T16:00:00.000Z">2019-03-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
@@ -248,7 +241,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-15T14:06:57.945Z">2019-03-15</time>
+                <time class="level-item has-text-grey" datetime="2019-03-14T16:00:00.000Z">2019-03-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
@@ -306,7 +299,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-14T11:33:44.135Z">2019-03-14</time>
+                <time class="level-item has-text-grey" datetime="2019-03-13T16:00:00.000Z">2019-03-14</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
@@ -644,16 +637,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/10/图片转字符/" class="media-left">
+            <a href="/2019/04/08/图片转字符/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                    <img class="thumbnail" src="/gallery/转字符.jpg" alt="图片转字符">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
-                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T16:00:00.000Z">2019-04-08</time></div>
+                    <a href="/2019/04/08/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -663,18 +656,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
+            <a href="/2019/04/07/动态规划/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T15:10:56.281Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">各种协议与http协议的关系</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T16:00:00.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
                     </p>
                 </div>
             </div>
@@ -682,18 +675,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/06/DNS/" class="media-left">
+            <a href="/2019/04/06/贪心/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
-                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-05T16:00:00.000Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -701,7 +694,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/插入排序/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -709,8 +702,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:35:27.330Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
@@ -720,18 +713,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/动态规划/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:25:01.771Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -755,7 +748,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -766,7 +759,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -796,16 +789,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/10/图片转字符/" class="media-left">
+            <a href="/2019/04/08/图片转字符/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                    <img class="thumbnail" src="/gallery/转字符.jpg" alt="图片转字符">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
-                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T16:00:00.000Z">2019-04-08</time></div>
+                    <a href="/2019/04/08/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -815,18 +808,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
+            <a href="/2019/04/07/动态规划/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T15:10:56.281Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">各种协议与http协议的关系</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T16:00:00.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
                     </p>
                 </div>
             </div>
@@ -834,18 +827,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/06/DNS/" class="media-left">
+            <a href="/2019/04/06/贪心/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
-                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-05T16:00:00.000Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -853,7 +846,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/插入排序/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -861,8 +854,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:35:27.330Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
@@ -872,18 +865,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/动态规划/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:25:01.771Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -907,7 +900,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -918,7 +911,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>

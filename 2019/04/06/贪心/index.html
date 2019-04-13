@@ -2,26 +2,22 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>交换排序 - Cimex</title>
+<title>贪心 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="冒泡排序">
-<meta name="keywords" content="数组,分治,递归">
+    <meta name="description" content="简介贪心算法（greedy algorithm)是一种短视的算法，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="交换排序">
-<meta property="og:url" content="http://yoursite.com/2019/04/04/交换排序/index.html">
+<meta property="og:title" content="贪心">
+<meta property="og:url" content="http://yoursite.com/2019/04/06/贪心/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="冒泡排序">
+<meta property="og:description" content="简介贪心算法（greedy algorithm)是一种短视的算法，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/04/04/交换排序/交换排序.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/04/04/交换排序/快速排序.jpg">
-<meta property="og:updated_time" content="2019-04-06T14:40:23.788Z">
+<meta property="og:updated_time" content="2019-04-13T02:07:56.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="交换排序">
-<meta name="twitter:description" content="冒泡排序">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/04/交换排序/交换排序.jpg">
+<meta name="twitter:title" content="贪心">
+<meta name="twitter:description" content="简介贪心算法（greedy algorithm)是一种短视的算法，">
 
 
 
@@ -88,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="交换排序" height="28">
+                <img src="/images/logo.svg" alt="贪心" height="28">
             
             </a>
         </div>
@@ -130,7 +126,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
+            <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
         </span>
     </div>
     
@@ -138,17 +134,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-04T14:12:49.897Z">2019-04-04</time>
+                <time class="level-item has-text-grey" datetime="2019-04-05T16:00:00.000Z">2019-04-06</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/算法/">算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
+                <a class="has-link-grey -link" href="/categories/算法/">算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 288 个字)
+                    1 分钟 读完 (大约 146 个字)
                 </span>
                 
                 
@@ -157,40 +153,14 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                交换排序
+                贪心
             
         </h1>
         <div class="content">
-            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><a id="more"></a>
-<p>伪码</p>
-<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BubbleSort</span><span class="hljs-params">(ElemType A[], <span class="hljs-keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; i&lt;n<span class="hljs-number">-1</span>; ++i)&#123;</span><br><span class="line">    flag=<span class="hljs-literal">false</span>;                     <span class="hljs-comment">//交换是否发生的标志</span></span><br><span class="line">        <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; j&gt;i; --j)&#123;        <span class="hljs-comment">//一趟冒泡过程</span></span><br><span class="line">        <span class="hljs-keyword">if</span>(A[j<span class="hljs-number">-1</span>].key&gt;A[j].key)&#123;    <span class="hljs-comment">//若为逆序</span></span><br><span class="line">            swap(A[j<span class="hljs-number">-1</span>],A[j]);      <span class="hljs-comment">//交换</span></span><br><span class="line">            flag=<span class="hljs-literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(flag==<span class="hljs-literal">false</span>)</span><br><span class="line">            <span class="hljs-keyword">return</span>;                 <span class="hljs-comment">//遍历没有发生，说明表已有序</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>时间复杂度</th>
-<th>空间复杂度  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>O(n^2)</td>
-<td>O(1)</td>
-<td>稳定</td>
-</tr>
-</tbody>
-</table>
-<h1 id="中值排序"><a href="#中值排序" class="headerlink" title="中值排序"></a>中值排序</h1><img src="/2019/04/04/交换排序/交换排序.jpg">
-<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">   * 在线性时间，根据给定的中枢值重新组合子序列ar[left，right]，</span></span><br><span class="line"><span class="hljs-comment">   * 将中枢值存储在其正确的位置store，确保所有在子序列ar[left, store)中的</span></span><br><span class="line"><span class="hljs-comment">   * 元素&lt;=pivot并且所有在ar[store+1, right]中的元素&gt;pivot。</span></span><br><span class="line"><span class="hljs-comment">   */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span> <span class="hljs-params">(<span class="hljs-keyword">void</span> **ar, <span class="hljs-keyword">int</span>(*cmp)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *),</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">  nt left, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> pivotIndex)</span> </span>&#123;</span><br><span class="line">  nt idx, store;</span><br><span class="line">  <span class="hljs-keyword">void</span> *pivot = ar[pivotIndex];</span><br><span class="line">  <span class="hljs-comment">/*将中枢值移动到数组结尾。*/</span></span><br><span class="line">  <span class="hljs-keyword">void</span> *tmp = ar[right];</span><br><span class="line">  ar[right] = ar[pivotIndex];</span><br><span class="line">  ar[pivotIndex] = tmp;</span><br><span class="line"><span class="hljs-comment">/*所有小于等于中枢值的元素都会移动到数组的前面，然后将中枢值插在它们后面。*/</span></span><br><span class="line">  store = left;</span><br><span class="line">  <span class="hljs-keyword">for</span> (idx = left; idx &lt; right; idx++) &#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (cmp(ar[idx], pivot) &lt;= <span class="hljs-number">0</span>) &#123;</span><br><span class="line">      tmp = ar[idx];</span><br><span class="line">      ar[idx] = ar[store];</span><br><span class="line">      ar[store] = tmp;</span><br><span class="line">      store++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  mp = ar[right];</span><br><span class="line">  ar[right] = ar[store];</span><br><span class="line">  ar[store] = tmp;</span><br><span class="line">  <span class="hljs-keyword">return</span> store;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><img src="/2019/04/04/交换排序/快速排序.jpg">
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/分治/">分治</a>, <a class="has-link-grey -link" href="/tags/数组/">数组</a>, <a class="has-link-grey -link" href="/tags/递归/">递归</a>
-                </div>
-            </div>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>贪心算法（greedy algorithm)是一种短视的算法，<br><a id="more"></a><br>每一个选择都是独立的，都是当前环境下能采取的最佳策略。</p>
+<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><p>1.创建数学模型来描述问题。<br>2.把求解的问题分成若干个子问题。<br>3.对每一子问题求解，得到子问题的局部最优解。<br>4.把子问题的解局部最优解合成原来解问题的一个解。</p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>最小生成树的算法：Prim MST、Kruskal MST<br>单源最短路径：Djikstra’s</p>
+
         </div>
         
         
@@ -206,16 +176,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/04/贪心/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/07/动态规划/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">贪心</span>
+                <span class="level-item">动态规划</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/27/TCP-IP/">
-                <span class="level-item">TCP三次握手四次挥手</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/05/插入排序/">
+                <span class="level-item">插入排序</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -322,17 +292,17 @@
                 目录
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#冒泡排序">
+        <a class="is-flex" href="#简介">
         <span class="has-mr-6">1</span>
-        <span>冒泡排序</span>
+        <span>简介</span>
         </a></li><li>
-        <a class="is-flex" href="#中值排序">
+        <a class="is-flex" href="#实现步骤">
         <span class="has-mr-6">2</span>
-        <span>中值排序</span>
+        <span>实现步骤</span>
         </a></li><li>
-        <a class="is-flex" href="#快速排序">
+        <a class="is-flex" href="#例子">
         <span class="has-mr-6">3</span>
-        <span>快速排序</span>
+        <span>例子</span>
         </a></li></ul>
         </div>
     </div>
@@ -518,16 +488,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/10/图片转字符/" class="media-left">
+            <a href="/2019/04/08/图片转字符/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                    <img class="thumbnail" src="/gallery/转字符.jpg" alt="图片转字符">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
-                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T16:00:00.000Z">2019-04-08</time></div>
+                    <a href="/2019/04/08/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -537,18 +507,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
+            <a href="/2019/04/07/动态规划/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T15:10:56.281Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">各种协议与http协议的关系</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T16:00:00.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
                     </p>
                 </div>
             </div>
@@ -556,18 +526,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/06/DNS/" class="media-left">
+            <a href="/2019/04/06/贪心/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
-                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-05T16:00:00.000Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -575,7 +545,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/插入排序/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -583,8 +553,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:35:27.330Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
@@ -594,18 +564,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/动态规划/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:25:01.771Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -629,7 +599,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -640,7 +610,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -670,16 +640,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/10/图片转字符/" class="media-left">
+            <a href="/2019/04/08/图片转字符/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="图片转字符">
+                    <img class="thumbnail" src="/gallery/转字符.jpg" alt="图片转字符">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-10T14:29:48.937Z">2019-04-10</time></div>
-                    <a href="/2019/04/10/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T16:00:00.000Z">2019-04-08</time></div>
+                    <a href="/2019/04/08/图片转字符/" class="has-link-black-ter is-size-6">图片转字符</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -689,18 +659,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/07/各种协议与http协议的关系/" class="media-left">
+            <a href="/2019/04/07/动态规划/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="各种协议与http协议的关系">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T15:10:56.281Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">各种协议与http协议的关系</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T16:00:00.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
                     </p>
                 </div>
             </div>
@@ -708,18 +678,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/06/DNS/" class="media-left">
+            <a href="/2019/04/06/贪心/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="贪心">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-06T14:52:08.065Z">2019-04-06</time></div>
-                    <a href="/2019/04/06/DNS/" class="has-link-black-ter is-size-6">DNS</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-05T16:00:00.000Z">2019-04-06</time></div>
+                    <a href="/2019/04/06/贪心/" class="has-link-black-ter is-size-6">贪心</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/贪心/">贪心</a>
                     </p>
                 </div>
             </div>
@@ -727,7 +697,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/插入排序/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
@@ -735,8 +705,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:35:27.330Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
@@ -746,18 +716,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/04/动态规划/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="动态规划">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T14:25:01.771Z">2019-04-04</time></div>
-                    <a href="/2019/04/04/动态规划/" class="has-link-black-ter is-size-6">动态规划</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/动态规划/">动态规划</a>
+                        <a class="has-link-grey -link" href="/categories/算法/">算法</a> / <a class="has-link-grey -link" href="/categories/算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -781,7 +751,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -792,7 +762,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -814,7 +784,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="交换排序" height="28">
+                    <img src="/images/logo.svg" alt="贪心" height="28">
                 
                 </a>
                 <p class="is-size-7">
