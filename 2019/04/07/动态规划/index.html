@@ -7,14 +7,20 @@
 
 
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="实例背包问题">
+<meta property="og:type" content="article">
 <meta property="og:title" content="动态规划">
 <meta property="og:url" content="http://yoursite.com/2019/04/07/动态规划/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="实例背包问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-13T02:07:56.503Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/07/动态规划/fiv1.svg">
+<meta property="og:image" content="http://yoursite.com/2019/04/07/动态规划/fiv2.svg">
+<meta property="og:updated_time" content="2019-04-13T14:50:20.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划">
+<meta name="twitter:description" content="实例背包问题">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/07/动态规划/fiv1.svg">
 
 
 
@@ -141,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    2 分钟 读完 (大约 374 个字)
                 </span>
                 
                 
@@ -154,7 +160,10 @@
             
         </h1>
         <div class="content">
-            
+            <h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h2><a id="more"></a>
+<p>背包问题作为NP完全问题，暂时不存在多项式时间算法。动态规划属于背包问题求解最优解的可行方法之一。<br>此外，求解背包问题最优解还有搜索法等，近似解还有贪心法等，分数背包问题有最优贪心解等。<br>背包问题具有最优子结构和重叠子问题。动态规划一般用于求解背包问题中的整数背包问题（即每种物品所选的个数必须是整数）。<br>解整数背包问题： 设有n件物品，每件价值记为P_i  ，每件体积记为V_i ，用一个最大容积为V_max的背包，求装入物品的最大价值。<br> 用一个数组f[i,v]}表示取i件商品填充一个容积为v的背包的最大价值，显然问题的解就是f[n,V_max]。<br><img src="/2019/04/07/动态规划/fiv1.svg"><br>对于特例01背包问题（即每件物品最多放1件，否则不放入）的问题，状态转移方程：<br><img src="/2019/04/07/动态规划/fiv2.svg"></p>
+<p>C++代码（不含include和数组声明）<br><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> max(x,y) (x)&gt;(y)?(x):(y) <span class="hljs-comment">//max宏函数，也可以自己写或者调取algorithm</span></span></span><br><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)</span><br><span class="line">  <span class="hljs-keyword">for</span> (v=totv;v&gt;=v[i];v--)</span><br><span class="line">    f[v]=max(f[v],f[v-v[i]]+p[i]);</span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>,f[totv]); <span class="hljs-comment">//或std:cout&lt;&lt;f[totv];</span></span><br></pre></td></tr></table></figure></p>
+
         </div>
         
         
@@ -285,7 +294,15 @@
             <h3 class="menu-label">
                 目录
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#实例">
+        <span class="has-mr-6">1</span>
+        <span>实例</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#背包问题">
+        <span class="has-mr-6">1.1</span>
+        <span>背包问题</span>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
