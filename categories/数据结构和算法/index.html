@@ -148,7 +148,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 68 个字)
+                    1 分钟 读完 (大约 141 个字)
                 </span>
                 
                 
@@ -161,13 +161,17 @@
             
         </h1>
         <div class="content">
-            <a id="more"></a>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="hljs-number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hanoi</span><span class="hljs-params">(n, src, dst, mid)</span>:</span></span><br><span class="line">    <span class="hljs-keyword">global</span> count</span><br><span class="line">    <span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:</span><br><span class="line">        print(<span class="hljs-string">"&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;"</span>.format(<span class="hljs-number">1</span>, src, dst))</span><br><span class="line">        count += <span class="hljs-number">1</span></span><br><span class="line">    <span class="hljs-keyword">else</span>:</span><br><span class="line">        hanoi(n<span class="hljs-number">-1</span>, src, mid, dst)</span><br><span class="line">        print(<span class="hljs-string">"&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;"</span>.format(n, src, dst))</span><br><span class="line">        count += <span class="hljs-number">1</span></span><br><span class="line">        hanoi(n<span class="hljs-number">-1</span>, mid, dst, src)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    hanoi(<span class="hljs-number">3</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"C"</span>, <span class="hljs-string">"B"</span>)</span><br><span class="line">    print(count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<p>运行结果如下:<br><img src="/2019/04/18/hanoi问题/hanoi.png"></p>
-<p>示意图<br><img src="/2019/04/18/hanoi问题/hanoi3阶示意图.jpg"></p>
-
+            <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/18/hanoi问题/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -234,7 +238,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
@@ -455,7 +459,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/基础/">
                         <span class="tag">基础</span>
-                        <span class="tag is-grey">11</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -463,6 +467,13 @@
                     <a class="tags has-addons" href="/tags/数组/">
                         <span class="tag">数组</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/网络/">
+                        <span class="tag">网络</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
