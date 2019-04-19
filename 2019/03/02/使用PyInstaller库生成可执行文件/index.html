@@ -2,18 +2,28 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2019/4 - Cimex</title>
+<title>使用PyInstaller库生成可执行文件 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/archives/2019/04/page/2/index.html">
+    <meta name="description" content="首先安装PyInstaller库(cmd命令行)">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用PyInstaller库生成可执行文件">
+<meta property="og:url" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="首先安装PyInstaller库(cmd命令行)">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/主要参数.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/打包前.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/打包后.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/dist文件夹.png">
+<meta property="og:updated_time" content="2019-04-19T14:35:45.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="使用PyInstaller库生成可执行文件">
+<meta name="twitter:description" content="首先安装PyInstaller库(cmd命令行)">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/02/使用PyInstaller库生成可执行文件/主要参数.png">
 
 
 
@@ -80,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="使用PyInstaller库生成可执行文件" height="28">
             
             </a>
         </div>
@@ -101,6 +111,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -114,108 +128,86 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        四月 2019
-        </h3>
-        <div class="timeline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-01T16:00:00.000Z">2019-03-02</time>
                 
-                <a href="/2019/04/03/TCP-IP/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/TCP-IP模型.jpg" alt="TCP三次握手四次挥手">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time>
-                        <a href="/2019/04/03/TCP-IP/" class="has-link-black-ter is-size-6">TCP三次握手四次挥手</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/TCP-IP/">TCP/IP</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Python/">Python</a>
                 </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-01T16:00:00.000Z">2019-04-02</time>
-                        <a href="/2019/04/02/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">各种协议与http协议的关系</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <a href="/2019/04/02/DNS/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
-                    </p>
-                </a>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 112 个字)
+                </span>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-01T16:00:00.000Z">2019-04-02</time>
-                        <a href="/2019/04/02/DNS/" class="has-link-black-ter is-size-6">DNS</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                使用PyInstaller库生成可执行文件
+            
+        </h1>
+        <div class="content">
+            <h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><a id="more"></a>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/使用PyInstaller库生成可执行文件/主要参数.png">
+<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标<br><img src="/2019/03/02/使用PyInstaller库生成可执行文件/打包前.png"></p>
+<p>在需要打包的文件根目录下使用命令<br><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure></p>
+<p>打包完成<br><img src="/2019/03/02/使用PyInstaller库生成可执行文件/打包后.png"><br>需要的可执行文件在dist目录，如下<br><img src="/2019/03/02/使用PyInstaller库生成可执行文件/dist文件夹.png"></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/基础/">基础</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
     </div>
 </div>
 
 
 
-    
+
+
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/04/">上一页</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/14/Linux常用命令(一)/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux常用命令(一)</span>
+            </a>
         </div>
-        <div class="pagination-next is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/04/page/3/">下一页</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/01/format用法/">
+                <span class="level-item">format用法</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/04/">1</a></li>
-            
-            <li><a class="pagination-link is-current" href="/archives/2019/04/page/2/">2</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -250,7 +242,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        18
                     </p>
                 </div>
             </div>
@@ -260,7 +252,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        18
                     </p>
                 </div>
             </div>
@@ -307,6 +299,29 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#首先安装PyInstaller库-cmd命令行">
+        <span class="has-mr-6">1</span>
+        <span>首先安装PyInstaller库(cmd命令行)</span>
+        </a></li><li>
+        <a class="is-flex" href="#主要参数">
+        <span class="has-mr-6">2</span>
+        <span>主要参数</span>
+        </a></li><li>
+        <a class="is-flex" href="#修改图标并打包">
+        <span class="has-mr-6">3</span>
+        <span>修改图标并打包</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -394,31 +409,15 @@
                 <span class="level-item">数据结构和算法</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">3</span>
             </span>
         </a><ul><li>
-        <a class="level is-marginless" href="/categories/数据结构和算法/动态规划/">
-            <span class="level-start">
-                <span class="level-item">动态规划</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/数据结构和算法/排序/">
             <span class="level-start">
                 <span class="level-item">排序</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/数据结构和算法/贪心/">
-            <span class="level-start">
-                <span class="level-item">贪心</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/数据结构和算法/递归/">
@@ -468,6 +467,14 @@
             <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/计算机网络/http/">
+            <span class="level-start">
+                <span class="level-item">http</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
         </a></li></ul></li>
             </ul>
         </div>
@@ -486,18 +493,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/19/format用法/" class="media-left">
+            <a href="/2019/04/10/git和github(一)基础操作/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/python.jpg" alt="format用法">
+                    <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-18T16:00:00.000Z">2019-04-19</time></div>
-                    <a href="/2019/04/19/format用法/" class="has-link-black-ter is-size-6">format用法</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-09T16:00:00.000Z">2019-04-10</time></div>
+                    <a href="/2019/04/10/git和github(一)基础操作/" class="has-link-black-ter is-size-6">git和github(一)基础操作</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/基础函数/">基础函数</a>
+                        <a class="has-link-grey -link" href="/categories/版本控制/">版本控制</a> / <a class="has-link-grey -link" href="/categories/版本控制/git/">git</a>
                     </p>
                 </div>
             </div>
@@ -505,18 +512,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/koch雪花/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/turtle/">turtle</a>
+                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -524,18 +531,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/使用PyInstaller库生成可执行文件/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="使用PyInstaller库生成可执行文件">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/使用PyInstaller库生成可执行文件/" class="has-link-black-ter is-size-6">使用PyInstaller库生成可执行文件</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -543,7 +550,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/hanoi问题/" class="media-left">
+            <a href="/2019/04/04/hanoi问题/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/hanoi.jpg" alt="hanoi问题">
                 </p>
@@ -551,8 +558,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/hanoi问题/" class="has-link-black-ter is-size-6">hanoi问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T16:00:00.000Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/hanoi问题/" class="has-link-black-ter is-size-6">hanoi问题</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/递归/">递归</a>
                     </p>
@@ -562,18 +569,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/17/git和github(一)基础操作/" class="media-left">
+            <a href="/2019/04/03/koch雪花/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
+                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-16T16:00:00.000Z">2019-04-17</time></div>
-                    <a href="/2019/04/17/git和github(一)基础操作/" class="has-link-black-ter is-size-6">git和github(一)基础操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time></div>
+                    <a href="/2019/04/03/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/版本控制/">版本控制</a> / <a class="has-link-grey -link" href="/categories/版本控制/git/">git</a>
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/turtle/">turtle</a>
                     </p>
                 </div>
             </div>
@@ -597,7 +604,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -608,7 +615,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -624,7 +631,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 13.33px;">数组</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/递归/" style="font-size: 10px;">递归</a>
+        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 13.33px;">数组</a> <a href="/tags/网络/" style="font-size: 16.67px;">网络</a> <a href="/tags/递归/" style="font-size: 13.33px;">递归</a>
     </div>
 </div>
 
@@ -649,18 +656,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/19/format用法/" class="media-left">
+            <a href="/2019/04/10/git和github(一)基础操作/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/python.jpg" alt="format用法">
+                    <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-18T16:00:00.000Z">2019-04-19</time></div>
-                    <a href="/2019/04/19/format用法/" class="has-link-black-ter is-size-6">format用法</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-09T16:00:00.000Z">2019-04-10</time></div>
+                    <a href="/2019/04/10/git和github(一)基础操作/" class="has-link-black-ter is-size-6">git和github(一)基础操作</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/基础函数/">基础函数</a>
+                        <a class="has-link-grey -link" href="/categories/版本控制/">版本控制</a> / <a class="has-link-grey -link" href="/categories/版本控制/git/">git</a>
                     </p>
                 </div>
             </div>
@@ -668,18 +675,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/koch雪花/" class="media-left">
+            <a href="/2019/04/05/插入排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/turtle/">turtle</a>
+                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -687,18 +694,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/使用PyInstaller库生成可执行文件/" class="media-left">
+            <a href="/2019/04/05/交换排序/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="使用PyInstaller库生成可执行文件">
+                    <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/使用PyInstaller库生成可执行文件/" class="has-link-black-ter is-size-6">使用PyInstaller库生成可执行文件</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
+                    <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
                     </p>
                 </div>
             </div>
@@ -706,7 +713,7 @@
         
         <article class="media">
             
-            <a href="/2019/04/18/hanoi问题/" class="media-left">
+            <a href="/2019/04/04/hanoi问题/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/hanoi.jpg" alt="hanoi问题">
                 </p>
@@ -714,8 +721,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/hanoi问题/" class="has-link-black-ter is-size-6">hanoi问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-03T16:00:00.000Z">2019-04-04</time></div>
+                    <a href="/2019/04/04/hanoi问题/" class="has-link-black-ter is-size-6">hanoi问题</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/递归/">递归</a>
                     </p>
@@ -725,18 +732,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/17/git和github(一)基础操作/" class="media-left">
+            <a href="/2019/04/03/koch雪花/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
+                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-16T16:00:00.000Z">2019-04-17</time></div>
-                    <a href="/2019/04/17/git和github(一)基础操作/" class="has-link-black-ter is-size-6">git和github(一)基础操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time></div>
+                    <a href="/2019/04/03/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/版本控制/">版本控制</a> / <a class="has-link-grey -link" href="/categories/版本控制/git/">git</a>
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/turtle/">turtle</a>
                     </p>
                 </div>
             </div>
@@ -760,7 +767,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -771,7 +778,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -787,7 +794,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 13.33px;">数组</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/递归/" style="font-size: 10px;">递归</a>
+        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 13.33px;">数组</a> <a href="/tags/网络/" style="font-size: 16.67px;">网络</a> <a href="/tags/递归/" style="font-size: 13.33px;">递归</a>
     </div>
 </div>
 
@@ -804,7 +811,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="使用PyInstaller库生成可执行文件" height="28">
                 
                 </a>
                 <p class="is-size-7">
