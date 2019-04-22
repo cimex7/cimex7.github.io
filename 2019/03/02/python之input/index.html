@@ -2,18 +2,27 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2019 - Cimex</title>
+<title>python之input() - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+    <meta name="description" content="通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python之input()">
+<meta property="og:url" content="http://yoursite.com/2019/03/02/python之input/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/python之input/input输入类型.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/python之input/input输入类型1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/02/python之input/input输入类型2.png">
+<meta property="og:updated_time" content="2019-04-22T13:33:00.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="python之input()">
+<meta name="twitter:description" content="通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/02/python之input/input输入类型.png">
 
 
 
@@ -80,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="python之input()" height="28">
             
             </a>
         </div>
@@ -101,6 +110,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -114,285 +127,90 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/python.jpg" alt="python之input()">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-01T16:00:00.000Z">2019-03-02</time>
                 
-                <a href="/2019/04/22/python之eval/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/" alt="python之eval()">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-22T13:26:51.039Z">2019-04-22</time>
-                        <a href="/2019/04/22/python之eval/" class="has-link-black-ter is-size-6">python之eval()</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
                 </div>
-            </article>
-        
-            <article class="media">
                 
-                <a href="/2019/04/10/git和github(一)基础操作/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-09T16:00:00.000Z">2019-04-10</time>
-                        <a href="/2019/04/10/git和github(一)基础操作/" class="has-link-black-ter is-size-6">git和github(一)基础操作</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/版本控制/">版本控制</a> / <a class="has-link-grey -link" href="/categories/版本控制/GIT/">GIT</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 128 个字)
+                </span>
                 
-                <a href="/2019/04/05/插入排序/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time>
-                        <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/05/交换排序/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/算法.jpg" alt="交换排序">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time>
-                        <a href="/2019/04/05/交换排序/" class="has-link-black-ter is-size-6">交换排序</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/04/hanoi问题/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/hanoi.jpg" alt="hanoi问题">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-03T16:00:00.000Z">2019-04-04</time>
-                        <a href="/2019/04/04/hanoi问题/" class="has-link-black-ter is-size-6">hanoi问题</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/递归/">递归</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/03/koch雪花/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time>
-                        <a href="/2019/04/03/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/常用库/">常用库</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/03/TCP-IP/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/TCP-IP模型.jpg" alt="TCP三次握手四次挥手">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time>
-                        <a href="/2019/04/03/TCP-IP/" class="has-link-black-ter is-size-6">TCP三次握手四次挥手</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/TCP-IP/">TCP/IP</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/02/各种协议与http协议的关系/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/http协议.jpg" alt="http协议">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-01T16:00:00.000Z">2019-04-02</time>
-                        <a href="/2019/04/02/各种协议与http协议的关系/" class="has-link-black-ter is-size-6">http协议</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/HTTP/">HTTP</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/04/02/DNS/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/DNS.png" alt="DNS">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-04-01T16:00:00.000Z">2019-04-02</time>
-                        <a href="/2019/04/02/DNS/" class="has-link-black-ter is-size-6">DNS</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/计算机网络/">计算机网络</a> / <a class="has-link-grey -link" href="/categories/计算机网络/DNS/">DNS</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/23/Django项目(一)/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/Django.jpg" alt="搭建开发环境">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-22T16:00:00.000Z">2019-03-23</time>
-                        <a href="/2019/03/23/Django项目(一)/" class="has-link-black-ter is-size-6">搭建开发环境</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/Django框架/">Django框架</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                python之input()
+            
+        </h1>
+        <div class="content">
+            <p>通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?<br><a id="more"></a><br><img src="/2019/03/02/python之input/input输入类型.png"><br>通过type函数可以看到即使输入的int类型，input还是将其转换为字符串类型，那么如何将input的字符串类型转换为int类型？</p>
+<p><strong><em>1.使用eval()函数</em></strong></p>
+<img src="/2019/03/02/python之input/input输入类型1.png">
+<a href="/2019/04/22/python之eval/" title="python之eval()">python之eval()</a>
+<p><strong><em>2.使用强制类型转换int()函数</em></strong></p>
+<img src="/2019/03/02/python之input/input输入类型2.png">
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/python/">python</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
     </div>
 </div>
 
 
 
-    
+
+
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/page/0/">上一页</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/02/使用PyInstaller库生成可执行文件/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">使用PyInstaller库生成可执行文件</span>
+            </a>
         </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/page/2/">下一页</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/01/format用法/">
+                <span class="level-item">python之format()</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link is-current" href="/archives/2019/">1</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/page/2/">2</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -484,6 +302,17 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -973,7 +802,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="python之input()" height="28">
                 
                 </a>
                 <p class="is-size-7">
