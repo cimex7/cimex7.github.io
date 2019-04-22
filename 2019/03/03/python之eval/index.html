@@ -7,14 +7,20 @@
 
 
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="官方文档给出的功能解释：">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
 <meta property="og:title" content="python之eval()">
-<meta property="og:url" content="http://yoursite.com/2019/04/22/python之eval/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/python之eval/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="官方文档给出的功能解释：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-22T13:26:51.040Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/python之eval/eval()的用法.png">
+<meta property="og:updated_time" content="2019-04-22T13:57:15.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python之eval()">
+<meta name="twitter:description" content="官方文档给出的功能解释：">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/03/python之eval/eval()的用法.png">
 
 
 
@@ -123,7 +129,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/" alt="python之eval()">
+            <img class="thumbnail" src="/gallery/python.jpg" alt="python之eval()">
         </span>
     </div>
     
@@ -131,13 +137,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-22T13:26:51.039Z">2019-04-22</time>
+                <time class="level-item has-text-grey" datetime="2019-03-02T16:00:00.000Z">2019-03-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 1 个字)
+                    1 分钟 读完 (大约 220 个字)
                 </span>
                 
                 
@@ -150,7 +160,22 @@
             
         </h1>
         <div class="content">
-            <a id="more"></a>
+            <p>官方文档给出的功能解释：<br><a id="more"></a><br>eval（）：将字符串string对象转化为有效的表达式参与求值运算返回计算结果</p>
+<p>语法：调用的是：eval（expression，globals=None, locals=None）返回的是计算结果<br>其中：</p>
+<pre><code>*   expression是一个参与计算的python表达式
+*   globals是可选的参数，如果设置属性不为None的话，就必须是dictionary对象了
+*   locals也是一个可选的对象，如果设置属性不为None的话，可以是任何map对象了
+</code></pre><p>列表字符串，字典字符串，元组字符串的转换示例：<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> math</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">eval_test</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    l = <span class="hljs-string">'[1,2,3,4,[5,6,7,8,9]]'</span></span><br><span class="line">    d = <span class="hljs-string">"&#123;'a':123,'b':456,'c':789&#125;"</span></span><br><span class="line">    t = <span class="hljs-string">'([1,3,5],[5,6,7,8,9],[123,456,789])'</span></span><br><span class="line">    print(<span class="hljs-string">"----转换前---------转换后----"</span>)</span><br><span class="line">    print(type(l), type(eval(l)))</span><br><span class="line">    print(type(d), type(eval(d)))</span><br><span class="line">    print(type(t), type(eval(t)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:</span><br><span class="line">    eval_test()</span><br></pre></td></tr></table></figure></p>
+<img src="/2019/03/03/python之eval/eval()的用法.png">
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/python/">python</a>
+                </div>
+            </div>
         </div>
         
         
@@ -165,10 +190,17 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/14/Linux常用命令(一)/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux常用命令(一)</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/10/git和github(一)基础操作/">
-                <span class="level-item">git和github(一)基础操作</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/02/使用PyInstaller库生成可执行文件/">
+                <span class="level-item">使用PyInstaller库生成可执行文件</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -294,7 +326,7 @@
                 <span class="level-item">Python</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Python/Django框架/">
@@ -310,7 +342,7 @@
                 <span class="level-item">常用函数</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Python/常用库/">
@@ -450,25 +482,6 @@
         
         <article class="media">
             
-            <a href="/2019/04/22/python之eval/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="python之eval()">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-22T13:26:51.039Z">2019-04-22</time></div>
-                    <a href="/2019/04/22/python之eval/" class="has-link-black-ter is-size-6">python之eval()</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/04/10/git和github(一)基础操作/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
@@ -543,6 +556,25 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/04/03/koch雪花/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time></div>
+                    <a href="/2019/04/03/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/常用库/">常用库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -561,7 +593,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -572,7 +604,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -613,25 +645,6 @@
         
         <article class="media">
             
-            <a href="/2019/04/22/python之eval/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/" alt="python之eval()">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-22T13:26:51.039Z">2019-04-22</time></div>
-                    <a href="/2019/04/22/python之eval/" class="has-link-black-ter is-size-6">python之eval()</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/04/10/git和github(一)基础操作/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/git+github.jpg" alt="git和github(一)基础操作">
@@ -706,6 +719,25 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/04/03/koch雪花/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/分形几何.jpg" alt="科赫雪花">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T16:00:00.000Z">2019-04-03</time></div>
+                    <a href="/2019/04/03/koch雪花/" class="has-link-black-ter is-size-6">科赫雪花</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/常用库/">常用库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -724,7 +756,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -735,7 +767,7 @@
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
