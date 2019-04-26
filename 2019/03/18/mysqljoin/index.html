@@ -2,18 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2019 - Cimex</title>
+<title>数据库中的左连接(left join)和右连接(right join)区别 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+    <meta name="description" content="Left Join / Right Join /inner join左连接where只影向右表，右连接where只影响左表。">
+<meta name="keywords" content="SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库中的左连接(left join)和右连接(right join)区别">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/mysqljoin/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="Left Join / Right Join /inner join左连接where只影向右表，右连接where只影响左表。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-26T14:48:17.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="数据库中的左连接(left join)和右连接(right join)区别">
+<meta name="twitter:description" content="Left Join / Right Join /inner join左连接where只影向右表，右连接where只影响左表。">
 
 
 
@@ -80,7 +85,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="数据库中的左连接(left join)和右连接(right join)区别" height="28">
             
             </a>
         </div>
@@ -101,6 +106,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -114,285 +123,93 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/MySql.png" alt="数据库中的左连接(left join)和右连接(right join)区别">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-17T16:00:00.000Z">2019-03-18</time>
                 
-                <a href="/2019/03/18/mysqljoin/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/MySql.png" alt="数据库中的左连接(left join)和右连接(right join)区别">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-17T16:00:00.000Z">2019-03-18</time>
-                        <a href="/2019/03/18/mysqljoin/" class="has-link-black-ter is-size-6">数据库中的左连接(left join)和右连接(right join)区别</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a> / <a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
                 </div>
-            </article>
-        
-            <article class="media">
                 
-                <a href="/2019/03/17/MongoDB操作(一)/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/MongoDB.jpeg" alt="MongoDB数据库和集合的基本操作">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-16T16:00:00.000Z">2019-03-17</time>
-                        <a href="/2019/03/17/MongoDB操作(一)/" class="has-link-black-ter is-size-6">MongoDB数据库和集合的基本操作</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a> / <a class="has-link-grey -link" href="/categories/数据库/MongoDB/">MongoDB</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 166 个字)
+                </span>
                 
-                <a href="/2019/03/17/数据库操作/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/MySql.png" alt="数据库操作">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-16T16:00:00.000Z">2019-03-17</time>
-                        <a href="/2019/03/17/数据库操作/" class="has-link-black-ter is-size-6">数据库操作</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a> / <a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/17/表的操作/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/MySql.png" alt="表的操作">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-16T16:00:00.000Z">2019-03-17</time>
-                        <a href="/2019/03/17/表的操作/" class="has-link-black-ter is-size-6">表的操作</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a> / <a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/16/MySQL的安装/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/MySql.png" alt="MySQL的安装">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-15T16:00:00.000Z">2019-03-16</time>
-                        <a href="/2019/03/16/MySQL的安装/" class="has-link-black-ter is-size-6">MySQL的安装</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a> / <a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/15/Linux常用命令(二)/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/Linux.png" alt="Linux常用命令(二)">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-14T16:00:00.000Z">2019-03-15</time>
-                        <a href="/2019/03/15/Linux常用命令(二)/" class="has-link-black-ter is-size-6">Linux常用命令(二)</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a> / <a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/14/Linux常用命令(一)/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/Linux.png" alt="Linux常用命令(一)">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-13T16:00:00.000Z">2019-03-14</time>
-                        <a href="/2019/03/14/Linux常用命令(一)/" class="has-link-black-ter is-size-6">Linux常用命令(一)</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/操作系统/">操作系统</a> / <a class="has-link-grey -link" href="/categories/操作系统/Linux/">Linux</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/03/python之eval/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/python.jpg" alt="python之eval()">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-02T16:00:00.000Z">2019-03-03</time>
-                        <a href="/2019/03/03/python之eval/" class="has-link-black-ter is-size-6">python之eval()</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-01T16:00:00.000Z">2019-03-02</time>
-                        <a href="/2019/03/02/使用PyInstaller库生成可执行文件/" class="has-link-black-ter is-size-6">使用PyInstaller库生成可执行文件</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <a href="/2019/03/02/python之input/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="/gallery/python.jpg" alt="python之input()">
-                    </p>
-                </a>
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-03-01T16:00:00.000Z">2019-03-02</time>
-                        <a href="/2019/03/02/python之input/" class="has-link-black-ter is-size-6">python之input()</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Python/">Python</a> / <a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                数据库中的左连接(left join)和右连接(right join)区别
+            
+        </h1>
+        <div class="content">
+            <p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。<br><a id="more"></a></p>
+<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> tbl1 <span class="hljs-keyword">Left</span> <span class="hljs-keyword">Join</span> tbl2</span><br><span class="line">    <span class="hljs-keyword">where</span> tbl1.ID = tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
+<p>简言之 Left Join影响到的是右边的表</p>
+<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> tbl1 <span class="hljs-keyword">Right</span> <span class="hljs-keyword">Join</span> tbl2</span><br><span class="line">    <span class="hljs-keyword">where</span> tbl1.ID = tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
+<p>简言之 Right Join影响到的是左边的表。</p>
+<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">FROM</span> tbl1 <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="hljs-keyword">ON</span> tbl1.ID = tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/SQL/">SQL</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
     </div>
 </div>
 
 
 
-    
+
+
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/">上一页</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/20/图片转字符/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">图片转字符</span>
+            </a>
         </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/page/3/">下一页</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/17/MongoDB操作(一)/">
+                <span class="level-item">MongoDB数据库和集合的基本操作</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/">1</a></li>
-            
-            <li><a class="pagination-link is-current" href="/archives/2019/page/2/">2</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/page/3/">3</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -484,6 +301,29 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Left-Join">
+        <span class="has-mr-6">1</span>
+        <span>Left Join</span>
+        </a></li><li>
+        <a class="is-flex" href="#Right-Join">
+        <span class="has-mr-6">2</span>
+        <span>Right Join</span>
+        </a></li><li>
+        <a class="is-flex" href="#inner-join">
+        <span class="has-mr-6">3</span>
+        <span>inner join</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -973,7 +813,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="数据库中的左连接(left join)和右连接(right join)区别" height="28">
                 
                 </a>
                 <p class="is-size-7">
