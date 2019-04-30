@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Cimex">
 <meta property="og:description" content="某网站包含两个表，Customers表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-29T15:31:16.275Z">
+<meta property="og:updated_time" content="2019-04-30T14:45:50.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="183.从不订购的用户">
 <meta name="twitter:description" content="某网站包含两个表，Customers表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 207 个字)
+                    1 分钟 读完 (大约 205 个字)
                 </span>
                 
                 
@@ -165,7 +165,7 @@
 <p>Orders 表：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">----+------------+</span></span><br><span class="line">| Id | CustomerId |</span><br><span class="line">+<span class="hljs-comment">----+------------+</span></span><br><span class="line">| 1  | 3          |</span><br><span class="line">| 2  | 1          |</span><br><span class="line">+<span class="hljs-comment">----+------------+</span></span><br></pre></td></tr></table></figure></p>
 <p>例如给定上述表格，你的查询应返回：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Customers |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Henry     |</span><br><span class="line">| Max       |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br></pre></td></tr></table></figure></p>
 <p>思路</p>
-<p>查询目标：Name（As Customers）<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
+<p>查询目标：Name(As Customers)<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
 <p>解答<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">select</span></span><br><span class="line">    Customers.Name <span class="hljs-keyword">as</span> Customers</span><br><span class="line"><span class="hljs-keyword">from</span></span><br><span class="line">    Customers <span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> Orders <span class="hljs-keyword">on</span> Customers.Id = Orders.CustomerId</span><br><span class="line"><span class="hljs-keyword">where</span></span><br><span class="line">    Orders.Id <span class="hljs-keyword">is</span> <span class="hljs-literal">null</span></span><br></pre></td></tr></table></figure></p>
 
         </div>
