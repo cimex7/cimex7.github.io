@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="某网站包含两个表，Customers表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。">
+    <meta name="description" content="SQL架构：">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="183.从不订购的用户">
 <meta property="og:url" content="http://yoursite.com/2019/04/29/183-从不订购的用户/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="某网站包含两个表，Customers表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。">
+<meta property="og:description" content="SQL架构：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T11:53:08.411Z">
+<meta property="og:updated_time" content="2019-05-06T13:48:19.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="183.从不订购的用户">
-<meta name="twitter:description" content="某网站包含两个表，Customers表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。">
+<meta name="twitter:description" content="SQL架构：">
 
 
 
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 207 个字)
+                    1 分钟 读完 (大约 206 个字)
                 </span>
                 
                 
@@ -160,10 +160,10 @@
             
         </h1>
         <div class="content">
-            <p>某网站包含两个表，Customers表和 Orders 表。<br>编写一个 SQL 查询，找出所有从不订购任何东西的客户。<br><a id="more"></a><br>SQL架构：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Customers (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, <span class="hljs-keyword">Name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>))</span><br><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Orders (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, CustomerId <span class="hljs-built_in">int</span>)</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Customers</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'Joe'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'Henry'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'3'</span>, <span class="hljs-string">'Sam'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'4'</span>, <span class="hljs-string">'Max'</span>)</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Orders</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Orders (<span class="hljs-keyword">Id</span>, CustomerId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'3'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Orders (<span class="hljs-keyword">Id</span>, CustomerId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'1'</span>)</span><br></pre></td></tr></table></figure></p>
+            <p>SQL架构：<br><a id="more"></a><br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Customers (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, <span class="hljs-keyword">Name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>))</span><br><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Orders (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, CustomerId <span class="hljs-built_in">int</span>)</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Customers</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'Joe'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'Henry'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'3'</span>, <span class="hljs-string">'Sam'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Customers (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'4'</span>, <span class="hljs-string">'Max'</span>)</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Orders</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Orders (<span class="hljs-keyword">Id</span>, CustomerId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'3'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Orders (<span class="hljs-keyword">Id</span>, CustomerId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'1'</span>)</span><br></pre></td></tr></table></figure></p>
 <p>Customers 表：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">----+-------+</span></span><br><span class="line">| Id | Name  |</span><br><span class="line">+<span class="hljs-comment">----+-------+</span></span><br><span class="line">| 1  | Joe   |</span><br><span class="line">| 2  | Henry |</span><br><span class="line">| 3  | Sam   |</span><br><span class="line">| 4  | Max   |</span><br><span class="line">+<span class="hljs-comment">----+-------+</span></span><br></pre></td></tr></table></figure></p>
 <p>Orders 表：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">----+------------+</span></span><br><span class="line">| Id | CustomerId |</span><br><span class="line">+<span class="hljs-comment">----+------------+</span></span><br><span class="line">| 1  | 3          |</span><br><span class="line">| 2  | 1          |</span><br><span class="line">+<span class="hljs-comment">----+------------+</span></span><br></pre></td></tr></table></figure></p>
-<p>例如给定上述表格，你的查询应返回：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Customers |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Henry     |</span><br><span class="line">| Max       |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br></pre></td></tr></table></figure></p>
+<p>某网站包含两个表，Customers表和 Orders 表编写一个 SQL 查询，找出所有从不订购任何东西的客户。<br>例如给定上述表格，你的查询应返回：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Customers |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br><span class="line">| Henry     |</span><br><span class="line">| Max       |</span><br><span class="line">+<span class="hljs-comment">-----------+</span></span><br></pre></td></tr></table></figure></p>
 <p>思路：</p>
 <p>查询目标：Name(As Customers)<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
 <p>解答：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">select</span></span><br><span class="line">    Customers.Name <span class="hljs-keyword">as</span> Customers</span><br><span class="line"><span class="hljs-keyword">from</span></span><br><span class="line">    Customers <span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> Orders <span class="hljs-keyword">on</span> Customers.Id = Orders.CustomerId</span><br><span class="line"><span class="hljs-keyword">where</span></span><br><span class="line">    Orders.Id <span class="hljs-keyword">is</span> <span class="hljs-literal">null</span></span><br></pre></td></tr></table></figure></p>
@@ -246,7 +246,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        24
+                        25
                     </p>
                 </div>
             </div>
@@ -323,7 +323,7 @@
                 <span class="level-item">LeetCode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/LeetCode/数据库/">
@@ -331,7 +331,7 @@
                 <span class="level-item">数据库</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/Python/">
@@ -495,6 +495,25 @@
         
         <article class="media">
             
+            <a href="/2019/05/06/184-部门工资最高的员工/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/leetcode.png" alt="184.部门工资最高的员工">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T16:00:00.000Z">2019-05-06</time></div>
+                    <a href="/2019/05/06/184-部门工资最高的员工/" class="has-link-black-ter is-size-6">184.部门工资最高的员工</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a> / <a class="has-link-grey -link" href="/categories/LeetCode/数据库/">数据库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/05/02/196-删除重复的电子邮箱/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/leetcode.png" alt="196.删除重复的电子邮箱">
@@ -569,25 +588,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/05/插入排序/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
-                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -606,7 +606,7 @@
                     <span class="level-item">五月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -644,7 +644,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 12.5px;">数组</a> <a href="/tags/网络/" style="font-size: 15px;">网络</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a>
+        <a href="/tags/LeetCode/" style="font-size: 17.5px;">LeetCode</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 12.5px;">数组</a> <a href="/tags/网络/" style="font-size: 15px;">网络</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a>
     </div>
 </div>
 
@@ -669,6 +669,25 @@
         
         <article class="media">
             
+            <a href="/2019/05/06/184-部门工资最高的员工/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/leetcode.png" alt="184.部门工资最高的员工">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T16:00:00.000Z">2019-05-06</time></div>
+                    <a href="/2019/05/06/184-部门工资最高的员工/" class="has-link-black-ter is-size-6">184.部门工资最高的员工</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a> / <a class="has-link-grey -link" href="/categories/LeetCode/数据库/">数据库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/05/02/196-删除重复的电子邮箱/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/leetcode.png" alt="196.删除重复的电子邮箱">
@@ -743,25 +762,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/05/插入排序/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/算法.jpg" alt="插入排序">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T16:00:00.000Z">2019-04-05</time></div>
-                    <a href="/2019/04/05/插入排序/" class="has-link-black-ter is-size-6">插入排序</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a> / <a class="has-link-grey -link" href="/categories/数据结构和算法/排序/">排序</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -780,7 +780,7 @@
                     <span class="level-item">五月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -818,7 +818,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 12.5px;">数组</a> <a href="/tags/网络/" style="font-size: 15px;">网络</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a>
+        <a href="/tags/LeetCode/" style="font-size: 17.5px;">LeetCode</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/SQL/" style="font-size: 15px;">SQL</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/分形几何/" style="font-size: 10px;">分形几何</a> <a href="/tags/分治/" style="font-size: 10px;">分治</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/数组/" style="font-size: 12.5px;">数组</a> <a href="/tags/网络/" style="font-size: 15px;">网络</a> <a href="/tags/递归/" style="font-size: 12.5px;">递归</a>
     </div>
 </div>
 
