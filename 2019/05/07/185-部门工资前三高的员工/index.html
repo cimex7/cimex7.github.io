@@ -2,18 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>标签: python - Cimex</title>
+<title>185.部门工资前三高的员工 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
+    <meta name="description" content="SQL架构：">
+<meta name="keywords" content="LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="185.部门工资前三高的员工">
+<meta property="og:url" content="http://yoursite.com/2019/05/07/185-部门工资前三高的员工/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="SQL架构：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-07T14:43:49.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="185.部门工资前三高的员工">
+<meta name="twitter:description" content="SQL架构：">
 
 
 
@@ -82,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="185.部门工资前三高的员工" height="28">
             
             </a>
         </div>
@@ -103,6 +108,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -117,39 +126,28 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">python</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/04/04/hanoi问题/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/hanoi.jpg" alt="hanoi问题">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/leetcode.png" alt="185.部门工资前三高的员工">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-03T16:00:00.000Z">2019-04-04</time>
+                <time class="level-item has-text-grey" datetime="2019-05-06T16:00:00.000Z">2019-05-07</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构和算法/">数据结构和算法</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据结构和算法/递归/">递归</a>
+                <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/LeetCode/数据库/">数据库</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 141 个字)
+                    2 分钟 读完 (大约 227 个字)
                 </span>
                 
                 
@@ -158,21 +156,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/04/hanoi问题/">hanoi问题</a>
+                185.部门工资前三高的员工
             
         </h1>
         <div class="content">
-            <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C<br></p>
+            <p>SQL架构：<br><a id="more"></a><br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Employee (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, <span class="hljs-keyword">Name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>), Salary <span class="hljs-built_in">int</span>, DepartmentId <span class="hljs-built_in">int</span>)</span><br><span class="line"><span class="hljs-keyword">Create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">If</span> <span class="hljs-keyword">Not</span> <span class="hljs-keyword">Exists</span> Department (<span class="hljs-keyword">Id</span> <span class="hljs-built_in">int</span>, <span class="hljs-keyword">Name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>))</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Employee</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'Joe'</span>, <span class="hljs-string">'85000'</span>, <span class="hljs-string">'1'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'Henry'</span>, <span class="hljs-string">'80000'</span>, <span class="hljs-string">'2'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'3'</span>, <span class="hljs-string">'Sam'</span>, <span class="hljs-string">'60000'</span>, <span class="hljs-string">'2'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'4'</span>, <span class="hljs-string">'Max'</span>, <span class="hljs-string">'90000'</span>, <span class="hljs-string">'1'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'5'</span>, <span class="hljs-string">'Janet'</span>, <span class="hljs-string">'69000'</span>, <span class="hljs-string">'1'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'6'</span>, <span class="hljs-string">'Randy'</span>, <span class="hljs-string">'85000'</span>, <span class="hljs-string">'1'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Employee (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>, Salary, DepartmentId) <span class="hljs-keyword">values</span> (<span class="hljs-string">'7'</span>, <span class="hljs-string">'Will'</span>, <span class="hljs-string">'70000'</span>, <span class="hljs-string">'1'</span>)</span><br><span class="line"><span class="hljs-keyword">Truncate</span> <span class="hljs-keyword">table</span> Department</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Department (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'1'</span>, <span class="hljs-string">'IT'</span>)</span><br><span class="line"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Department (<span class="hljs-keyword">Id</span>, <span class="hljs-keyword">Name</span>) <span class="hljs-keyword">values</span> (<span class="hljs-string">'2'</span>, <span class="hljs-string">'Sales'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>Employee 表包含所有员工信息，每个员工有其对应的 Id, salary 和 department Id 。<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">----+-------+--------+--------------+</span></span><br><span class="line">| Id | Name  | Salary | DepartmentId |</span><br><span class="line">+<span class="hljs-comment">----+-------+--------+--------------+</span></span><br><span class="line">| 1  | Joe   | 70000  | 1            |</span><br><span class="line">| 2  | Henry | 80000  | 2            |</span><br><span class="line">| 3  | Sam   | 60000  | 2            |</span><br><span class="line">| 4  | Max   | 90000  | 1            |</span><br><span class="line">| 5  | Janet | 69000  | 1            |</span><br><span class="line">| 6  | Randy | 85000  | 1            |</span><br><span class="line">+<span class="hljs-comment">----+-------+--------+--------------+</span></span><br></pre></td></tr></table></figure></p>
+<p>Department 表包含公司所有部门的信息。<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">----+----------+</span></span><br><span class="line">| Id | Name     |</span><br><span class="line">+<span class="hljs-comment">----+----------+</span></span><br><span class="line">| 1  | IT       |</span><br><span class="line">| 2  | Sales    |</span><br><span class="line">+<span class="hljs-comment">----+----------+</span></span><br></pre></td></tr></table></figure></p>
+<p>编写一个 SQL 查询，找出每个部门工资前三高的员工。例如，根据上述给定的表格，查询结果应返回：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+<span class="hljs-comment">------------+----------+--------+</span></span><br><span class="line">| Department | Employee | Salary |</span><br><span class="line">+<span class="hljs-comment">------------+----------+--------+</span></span><br><span class="line">| IT         | Max      | 90000  |</span><br><span class="line">| IT         | Randy    | 85000  |</span><br><span class="line">| IT         | Joe      | 70000  |</span><br><span class="line">| Sales      | Henry    | 80000  |</span><br><span class="line">| Sales      | Sam      | 60000  |</span><br><span class="line">+<span class="hljs-comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/04/hanoi问题/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/LeetCode/">LeetCode</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -182,181 +185,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/03/03/python之eval/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/python.jpg" alt="python之eval()">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-02T16:00:00.000Z">2019-03-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 220 个字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/06/184-部门工资最高的员工/">
+                <span class="level-item">184.部门工资最高的员工</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/03/python之eval/">python之eval()</a>
-            
-        </h1>
-        <div class="content">
-            <p>官方文档给出的功能解释：<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/03/python之eval/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/03/02/python之input/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/python.jpg" alt="python之input()">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-01T16:00:00.000Z">2019-03-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 164 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/02/python之input/">python之input()</a>
-            
-        </h1>
-        <div class="content">
-            <p>通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/02/python之input/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/03/01/format用法/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/python.jpg" alt="python之format()">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/常用函数/">常用函数</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 402 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/01/format用法/">python之format()</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/01/format用法/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -446,6 +287,17 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -973,7 +825,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="185.部门工资前三高的员工" height="28">
                 
                 </a>
                 <p class="is-size-7">
