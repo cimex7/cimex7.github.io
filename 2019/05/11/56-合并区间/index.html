@@ -2,23 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>表的操作 - Cimex</title>
+<title>56.合并区间 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="初级表的操作">
-<meta name="keywords" content="SQL">
+    <meta name="description" content="给出一个区间的集合，请合并所有重叠的区间。">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表的操作">
-<meta property="og:url" content="http://yoursite.com/2019/03/17/表的操作/index.html">
+<meta property="og:title" content="56.合并区间">
+<meta property="og:url" content="http://yoursite.com/2019/05/11/56-合并区间/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="初级表的操作">
+<meta property="og:description" content="给出一个区间的集合，请合并所有重叠的区间。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-26T14:47:25.846Z">
+<meta property="og:updated_time" content="2019-05-11T13:22:52.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表的操作">
-<meta name="twitter:description" content="初级表的操作">
+<meta name="twitter:title" content="56.合并区间">
+<meta name="twitter:description" content="给出一个区间的集合，请合并所有重叠的区间。">
 
 
 
@@ -87,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="表的操作" height="28">
+                <img src="/images/logo.svg" alt="56.合并区间" height="28">
             
             </a>
         </div>
@@ -129,7 +129,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/MySql.png" alt="表的操作">
+            <img class="thumbnail" src="/gallery/leetcode.png" alt="56.合并区间">
         </span>
     </div>
     
@@ -137,17 +137,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-16T16:00:00.000Z">2019-03-17</time>
+                <time class="level-item has-text-grey" datetime="2019-05-10T16:00:00.000Z">2019-05-11</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据库/">数据库</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/数据库/MySQL/">MySQL</a>
+                <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/LeetCode/排序/">排序</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 780 个字)
+                    1 分钟 读完 (大约 151 个字)
                 </span>
                 
                 
@@ -156,11 +156,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                表的操作
+                56.合并区间
             
         </h1>
         <div class="content">
-            <p>初级表的操作<br><a id="more"></a><br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 创建表</span></span><br><span class="line">    <span class="hljs-keyword">CREATE</span> [<span class="hljs-keyword">TEMPORARY</span>] <span class="hljs-keyword">TABLE</span>[ <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] [库名.]表名 ( 表的结构定义 )[ 表选项]</span><br><span class="line">        每个字段必须有数据类型</span><br><span class="line">        最后一个字段后不能有逗号</span><br><span class="line">        <span class="hljs-keyword">TEMPORARY</span> 临时表，会话结束时表自动消失</span><br><span class="line">        对于字段的定义：</span><br><span class="line">            字段名 数据类型 [<span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> | <span class="hljs-literal">NULL</span>] [<span class="hljs-keyword">DEFAULT</span> default_value] [AUTO_INCREMENT] [<span class="hljs-keyword">UNIQUE</span> [<span class="hljs-keyword">KEY</span>] | [PRIMARY] <span class="hljs-keyword">KEY</span>] [<span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'string'</span>]</span><br><span class="line"><span class="hljs-comment">-- 表选项</span></span><br><span class="line">    <span class="hljs-comment">-- 字符集</span></span><br><span class="line">        <span class="hljs-keyword">CHARSET</span> = charset_name</span><br><span class="line">        如果表没有设定，则使用数据库字符集</span><br><span class="line">    <span class="hljs-comment">-- 存储引擎</span></span><br><span class="line">        <span class="hljs-keyword">ENGINE</span> = engine_name</span><br><span class="line">        表在管理数据时采用的不同的数据结构，结构不同会导致处理方式、提供的特性操作等不同</span><br><span class="line">        常见的引擎：<span class="hljs-keyword">InnoDB</span> MyISAM <span class="hljs-keyword">Memory</span>/<span class="hljs-keyword">Heap</span> BDB <span class="hljs-keyword">Merge</span> Example CSV MaxDB <span class="hljs-keyword">Archive</span></span><br><span class="line">        不同的引擎在保存表的结构和数据时采用不同的方式</span><br><span class="line">        MyISAM表文件含义：.frm表定义，.MYD表数据，.MYI表索引</span><br><span class="line">        <span class="hljs-keyword">InnoDB</span>表文件含义：.frm表定义，表空间数据和日志文件</span><br><span class="line">        <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">ENGINES</span> <span class="hljs-comment">-- 显示存储引擎的状态信息</span></span><br><span class="line">        <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">ENGINE</span> 引擎名 &#123;<span class="hljs-keyword">LOGS</span>|<span class="hljs-keyword">STATUS</span>&#125; <span class="hljs-comment">-- 显示存储引擎的日志或状态信息</span></span><br><span class="line">    <span class="hljs-comment">-- 自增起始数</span></span><br><span class="line">        AUTO_INCREMENT = 行数</span><br><span class="line">    <span class="hljs-comment">-- 数据文件目录</span></span><br><span class="line">        <span class="hljs-keyword">DATA</span> <span class="hljs-keyword">DIRECTORY</span> = <span class="hljs-string">'目录'</span></span><br><span class="line">    <span class="hljs-comment">-- 索引文件目录</span></span><br><span class="line">        <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">DIRECTORY</span> = <span class="hljs-string">'目录'</span></span><br><span class="line">    <span class="hljs-comment">-- 表注释</span></span><br><span class="line">        <span class="hljs-keyword">COMMENT</span> = <span class="hljs-string">'string'</span></span><br><span class="line">    <span class="hljs-comment">-- 分区选项</span></span><br><span class="line">        <span class="hljs-keyword">PARTITION</span> <span class="hljs-keyword">BY</span> ... (详细见手册)</span><br><span class="line"><span class="hljs-comment">-- 查看所有表</span></span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">TABLES</span>[ <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'pattern'</span>]</span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">TABLES</span> <span class="hljs-keyword">FROM</span> 表名</span><br><span class="line"><span class="hljs-comment">-- 查看表机构</span></span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名 （信息更详细）</span><br><span class="line">    <span class="hljs-keyword">DESC</span> 表名 / <span class="hljs-keyword">DESCRIBE</span> 表名 / <span class="hljs-keyword">EXPLAIN</span> 表名 / <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">COLUMNS</span> <span class="hljs-keyword">FROM</span> 表名 [<span class="hljs-keyword">LIKE</span> <span class="hljs-string">'PATTERN'</span>]</span><br><span class="line">    <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">STATUS</span> [<span class="hljs-keyword">FROM</span> db_name] [<span class="hljs-keyword">LIKE</span> <span class="hljs-string">'pattern'</span>]</span><br><span class="line"><span class="hljs-comment">-- 修改表</span></span><br><span class="line">    <span class="hljs-comment">-- 修改表本身的选项</span></span><br><span class="line">        <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 表的选项</span><br><span class="line">        eg: <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">ENGINE</span>=MYISAM;</span><br><span class="line">    <span class="hljs-comment">-- 对表进行重命名</span></span><br><span class="line">        <span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">TABLE</span> 原表名 <span class="hljs-keyword">TO</span> 新表名</span><br><span class="line">        <span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">TABLE</span> 原表名 <span class="hljs-keyword">TO</span> 库名.表名 （可将表移动到另一个数据库）</span><br><span class="line">        <span class="hljs-comment">-- RENAME可以交换两个表名</span></span><br><span class="line">    <span class="hljs-comment">-- 修改表的字段机构（13.1.2. ALTER TABLE语法）</span></span><br><span class="line">        <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 操作名</span><br><span class="line">        <span class="hljs-comment">-- 操作名</span></span><br><span class="line">            <span class="hljs-keyword">ADD</span>[ <span class="hljs-keyword">COLUMN</span>] 字段定义       <span class="hljs-comment">-- 增加字段</span></span><br><span class="line">                <span class="hljs-keyword">AFTER</span> 字段名          <span class="hljs-comment">-- 表示增加在该字段名后面</span></span><br><span class="line">                <span class="hljs-keyword">FIRST</span>               <span class="hljs-comment">-- 表示增加在第一个</span></span><br><span class="line">            <span class="hljs-keyword">ADD</span> PRIMARY <span class="hljs-keyword">KEY</span>(字段名)   <span class="hljs-comment">-- 创建主键</span></span><br><span class="line">            <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">UNIQUE</span> [索引名] (字段名)<span class="hljs-comment">-- 创建唯一索引</span></span><br><span class="line">            <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span> [索引名] (字段名) <span class="hljs-comment">-- 创建普通索引</span></span><br><span class="line">            <span class="hljs-keyword">DROP</span>[ <span class="hljs-keyword">COLUMN</span>] 字段名      <span class="hljs-comment">-- 删除字段</span></span><br><span class="line">            <span class="hljs-keyword">MODIFY</span>[ <span class="hljs-keyword">COLUMN</span>] 字段名 字段属性     <span class="hljs-comment">-- 支持对字段属性进行修改，不能修改字段名(所有原有属性也需写上)</span></span><br><span class="line">            <span class="hljs-keyword">CHANGE</span>[ <span class="hljs-keyword">COLUMN</span>] 原字段名 新字段名 字段属性      <span class="hljs-comment">-- 支持对字段名修改</span></span><br><span class="line">            <span class="hljs-keyword">DROP</span> PRIMARY <span class="hljs-keyword">KEY</span>    <span class="hljs-comment">-- 删除主键(删除主键前需删除其AUTO_INCREMENT属性)</span></span><br><span class="line">            <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">INDEX</span> 索引名 <span class="hljs-comment">-- 删除索引</span></span><br><span class="line">            <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">FOREIGN</span> <span class="hljs-keyword">KEY</span> 外键    <span class="hljs-comment">-- 删除外键</span></span><br><span class="line"><span class="hljs-comment">-- 删除表</span></span><br><span class="line">    <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span>[ <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span>] 表名 ...</span><br><span class="line"><span class="hljs-comment">-- 清空表数据</span></span><br><span class="line">    <span class="hljs-keyword">TRUNCATE</span> [<span class="hljs-keyword">TABLE</span>] 表名</span><br><span class="line"><span class="hljs-comment">-- 复制表结构</span></span><br><span class="line">    <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">LIKE</span> 要复制的表名</span><br><span class="line"><span class="hljs-comment">-- 复制表结构和数据</span></span><br><span class="line">    <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名 [<span class="hljs-keyword">AS</span>] <span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> 要复制的表名</span><br><span class="line"><span class="hljs-comment">-- 检查表是否有错误</span></span><br><span class="line">    <span class="hljs-keyword">CHECK</span> <span class="hljs-keyword">TABLE</span> tbl_name [, tbl_name] ... [<span class="hljs-keyword">option</span>] ...</span><br><span class="line"><span class="hljs-comment">-- 优化表</span></span><br><span class="line">    <span class="hljs-keyword">OPTIMIZE</span> [<span class="hljs-keyword">LOCAL</span> | <span class="hljs-keyword">NO_WRITE_TO_BINLOG</span>] <span class="hljs-keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br><span class="line"><span class="hljs-comment">-- 修复表</span></span><br><span class="line">    <span class="hljs-keyword">REPAIR</span> [<span class="hljs-keyword">LOCAL</span> | <span class="hljs-keyword">NO_WRITE_TO_BINLOG</span>] <span class="hljs-keyword">TABLE</span> tbl_name [, tbl_name] ... [<span class="hljs-keyword">QUICK</span>] [<span class="hljs-keyword">EXTENDED</span>] [USE_FRM]</span><br><span class="line"><span class="hljs-comment">-- 分析表</span></span><br><span class="line">    <span class="hljs-keyword">ANALYZE</span> [<span class="hljs-keyword">LOCAL</span> | <span class="hljs-keyword">NO_WRITE_TO_BINLOG</span>] <span class="hljs-keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br></pre></td></tr></table></figure></p>
+            <p>给出一个区间的集合，请合并所有重叠的区间。<br><a id="more"></a><br>示例 1:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [[1,3],[2,6],[8,10],[15,18]]</span><br><span class="line">输出: [[1,6],[8,10],[15,18]]</span><br><span class="line">解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</span><br></pre></td></tr></table></figure></p>
+<p>示例 2:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [[1,4],[4,5]]</span><br><span class="line">输出: [[1,5]]</span><br><span class="line">解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。</span><br></pre></td></tr></table></figure></p>
+<p>解答：<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment"># Definition for an interval.</span></span><br><span class="line"><span class="hljs-comment"># class Interval(object):</span></span><br><span class="line"><span class="hljs-comment">#     def __init__(self, s=0, e=0):</span></span><br><span class="line"><span class="hljs-comment">#         self.start = s</span></span><br><span class="line"><span class="hljs-comment">#         self.end = e</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">merge</span><span class="hljs-params">(self, intervals: List[List[int]])</span> -&gt; List[List[int]]:</span></span><br><span class="line">        <span class="hljs-string">"""</span></span><br><span class="line"><span class="hljs-string">        :type intervals: List[Interval]</span></span><br><span class="line"><span class="hljs-string">        :rtype: List[Interval]</span></span><br><span class="line"><span class="hljs-string">        """</span></span><br><span class="line">        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intervals:</span><br><span class="line">            <span class="hljs-keyword">return</span> []</span><br><span class="line">        intervals = sorted(intervals,key=<span class="hljs-keyword">lambda</span> x:x.start)</span><br><span class="line">        res = []</span><br><span class="line">        left = intervals[<span class="hljs-number">0</span>].start</span><br><span class="line">        right = intervals[<span class="hljs-number">0</span>].end</span><br><span class="line">        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> intervals:</span><br><span class="line">            <span class="hljs-keyword">if</span> item.start &lt;= right:</span><br><span class="line">                right = max(right, item.end)</span><br><span class="line">            <span class="hljs-keyword">else</span>:</span><br><span class="line">                res.append([left, right])</span><br><span class="line">                left = item.start</span><br><span class="line">                right = item.end</span><br><span class="line">        res.append([left, right])</span><br><span class="line">                </span><br><span class="line">        <span class="hljs-keyword">return</span> res</span><br></pre></td></tr></table></figure></p>
 
         </div>
         
@@ -168,7 +170,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/SQL/">SQL</a>
+                    <a class="has-link-grey -link" href="/tags/LeetCode/">LeetCode</a>
                 </div>
             </div>
         </div>
@@ -185,17 +187,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/17/数据库操作/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">数据库操作</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/16/MySQL的安装/">
-                <span class="level-item">MySQL的安装</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/10/3-无重复字符的最长子串/">
+                <span class="level-item">3.无重复字符的最长子串</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -861,7 +856,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="表的操作" height="28">
+                    <img src="/images/logo.svg" alt="56.合并区间" height="28">
                 
                 </a>
                 <p class="is-size-7">
