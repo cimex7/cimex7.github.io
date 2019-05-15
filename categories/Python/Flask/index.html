@@ -2,23 +2,18 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>3.无重复字符的最长子串 - Cimex</title>
+<title>分类: Flask - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。">
-<meta name="keywords" content="LeetCode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="3.无重复字符的最长子串">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/3-无重复字符的最长子串/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Cimex">
+<meta property="og:url" content="http://yoursite.com/categories/Python/Flask/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-11T13:24:11.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3.无重复字符的最长子串">
-<meta name="twitter:description" content="给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。">
+<meta name="twitter:title" content="Cimex">
 
 
 
@@ -87,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="3.无重复字符的最长子串" height="28">
+                <img src="/images/logo.svg" alt="Cimex" height="28">
             
             </a>
         </div>
@@ -108,10 +103,6 @@
             <div class="navbar-end">
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -126,28 +117,42 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li><a href="/categories/Python/">Python</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">Flask</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-image">
-        <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/leetcode.png" alt="3.无重复字符的最长子串">
-        </span>
+        <a href="/2019/05/16/Flask框架/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/Flask.jpg" alt="Flask框架">
+        </a>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-09T16:00:00.000Z">2019-05-10</time>
+                <time class="level-item has-text-grey" datetime="2019-05-15T16:00:00.000Z">2019-05-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/LeetCode/字符串/">字符串</a>
+                <a class="has-link-grey -link" href="/categories/Python/">Python</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Python/Flask/">Flask</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 409 个字)
+                    几秒 读完 (大约 1 个字)
                 </span>
                 
                 
@@ -156,24 +161,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                3.无重复字符的最长子串
+                <a class="has-link-black-ter" href="/2019/05/16/Flask框架/">Flask框架</a>
             
         </h1>
         <div class="content">
-            <p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。<br><a id="more"></a><br>示例 1:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;abcabcbb&quot;</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br></pre></td></tr></table></figure></p>
-<p>示例 2:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;bbbbb&quot;</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span><br></pre></td></tr></table></figure></p>
-<p>示例 3:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;pwwkew&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure></p>
-<p>解答:<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(self, s)</span>:</span></span><br><span class="line">        <span class="hljs-string">"""</span></span><br><span class="line"><span class="hljs-string">        :type s: str</span></span><br><span class="line"><span class="hljs-string">        :rtype: int</span></span><br><span class="line"><span class="hljs-string">        """</span></span><br><span class="line">        <span class="hljs-comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="hljs-number">0</span></span><br><span class="line">        <span class="hljs-comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="hljs-keyword">if</span> s <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">or</span> len(s) == <span class="hljs-number">0</span>:</span><br><span class="line">            <span class="hljs-keyword">return</span> max_len</span><br><span class="line">        <span class="hljs-comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="hljs-comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="hljs-number">0</span></span><br><span class="line">        <span class="hljs-comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="hljs-number">0</span></span><br><span class="line">        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(s)):</span><br><span class="line">            <span class="hljs-comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="hljs-keyword">if</span> s[i] <span class="hljs-keyword">in</span> str_dict <span class="hljs-keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="hljs-comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="hljs-comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="hljs-number">1</span></span><br><span class="line">            <span class="hljs-comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="hljs-comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = max(max_len, one_max)</span><br><span class="line">        <span class="hljs-keyword">return</span> max_len</span><br></pre></td></tr></table></figure></p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/LeetCode/">LeetCode</a>
-                </div>
-            </div>
+            <a id="more"></a>
         </div>
         
         
@@ -185,26 +177,7 @@
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/11/56-合并区间/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">56.合并区间</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/09/2-两数相加/">
-                <span class="level-item">2.两数相加</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
 
 
 </div>
@@ -294,17 +267,6 @@
 </div>
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            
-        </div>
-    </div>
-</div>
-
     
         
 <div class="card widget">
@@ -880,7 +842,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="3.无重复字符的最长子串" height="28">
+                    <img src="/images/logo.svg" alt="Cimex" height="28">
                 
                 </a>
                 <p class="is-size-7">
