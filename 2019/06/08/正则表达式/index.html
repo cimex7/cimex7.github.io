@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Cimex">
 <meta property="og:description" content="正则表达式用于文本内容的查找，替换(正则表达式在线工具)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T15:01:15.485Z">
+<meta property="og:updated_time" content="2019-06-22T07:12:37.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="正则表达式用于文本内容的查找，替换(正则表达式在线工具)">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 112 个字)
+                    6 分钟 读完 (大约 847 个字)
                 </span>
                 
                 
@@ -163,6 +163,148 @@
             <p>正则表达式用于文本内容的查找，替换(<a href="https://regexr.com" target="_blank" rel="noopener">正则表达式在线工具</a>)</p>
 <a id="more"></a>
 <p>刚用python学写爬虫第一个难点就是正则表达式，学习曲线比较陡峭，一直是需要用就去查，没有刻意去记忆。<br>最近学Django框架，发现它的路由路径形式有一种就是正则形式，觉得值得一学。</p>
+<h1 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h1><p>. 可以用来匹配任何的单个字符，但是在绝大多数实现里面，不能匹配换行符；</p>
+<p>. 是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . 那么要用 \ 进行转义，即在 . 前面加上 \ 。</p>
+<p>正则表达式一般是区分大小写的，但是也有些实现是不区分。</p>
+<p>正则表达式<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nam.</span><br></pre></td></tr></table></figure></p>
+<p>匹配结果<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My name is Zheng.</span><br></pre></td></tr></table></figure></p>
+<h1 id="匹配一组字符"><a href="#匹配一组字符" class="headerlink" title="匹配一组字符"></a>匹配一组字符</h1><p>[ ] 定义一个字符集合；</p>
+<p>0-9、a-z 定义了一个字符区间，区间使用 ASCII 码来确定，字符区间在 [ ] 中使用。</p>
+<ul>
+<li>只有在 [ ] 之间才是元字符，在 [ ] 之外就是一个普通字符；</li>
+</ul>
+<p>^ 在 [ ] 中是取非操作。</p>
+<p><strong><em>应用</em></strong></p>
+<p>匹配以 abc 为开头，并且最后一个字母不为数字的字符串：</p>
+<p><strong><em>正则表达式</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abc[^0-9]</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>匹配结果</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abcd</span><br><span class="line">abc1</span><br><span class="line">abc2</span><br></pre></td></tr></table></figure></p>
+<h1 id="使用元字符"><a href="#使用元字符" class="headerlink" title="使用元字符"></a>使用元字符</h1><p><strong><em>匹配空白字符</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[\b]</td>
+<td>回退（删除）一个字符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符</td>
+</tr>
+</tbody>
+</table>
+<p>\r\n是 Windows 中的文本行结束标签，在 Unix/Linux 则是 \n。</p>
+<p>\r\n\r\n 可以匹配 Windows 下的空白行，因为它匹配两个连续的行尾标签，而这正是两条记录之间的空白行；</p>
+<p><strong><em>匹配特定的字符类别</em></strong></p>
+<ol>
+<li>数字元字符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td>数字字符，等价于 [0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>非数字字符，等价于 [^0-9]</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>字母数字元字符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\w</td>
+<td>大小写字母，下划线和数字，等价于 [a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>对 \w 取非</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>空白字符元字符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\s</td>
+<td>任何一个空白字符，等价于 [\f\n\r\t\v]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>对 \s 取非</td>
+</tr>
+<tr>
+<td>\x</td>
+<td>匹配十六进制字符，\0 匹配八进制，例如 \x0A 对应 ASCII 字符 10，等价于 \n。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h1><ul>
+<li>+匹配 1 个或者多个字符</li>
+<li>\ *匹配 0 个或者多个</li>
+<li>? 匹配 0 个或者 1 个</li>
+</ul>
+<p><strong><em>应用</em></strong></p>
+<p>匹配邮箱地址。</p>
+<p><strong><em>正则表达式</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[\w.]+@\w+\.\w+</span><br></pre></td></tr></table></figure></p>
+<p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
+<p><strong><em>匹配结果</em></strong></p>
+<p><a href="mailto:abc.def@qq.com" target="_blank" rel="noopener">abc.def@qq.com</a></p>
+<ul>
+<li>{n} 匹配 n 个字符</li>
+<li>{m, n} 匹配 m~n 个字符</li>
+<li><p>{m,} 至少匹配 m 个字符</p>
+</li>
+<li><p>和 + 都是贪婪型元字符，会匹配尽可能多的内容。在后面加<br>? 可以转换为懒惰型元字符，例如 *?、+? 和 {m, n}? 。</p>
+</li>
+</ul>
+<p><strong><em>正则表达式</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.+c</span><br></pre></td></tr></table></figure></p>
+<p>由于 + 是贪婪型的，因此 .+ 会匹配更可能多的内容，所以会把整个abcabcabc<br>文本都匹配，而不是只匹配前面的 abc 文本。用懒惰型可以实现匹配前面的。</p>
+<p><strong><em>匹配结果</em></strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abcabcabc</span><br></pre></td></tr></table></figure></p>
 
         </div>
         
@@ -292,7 +434,23 @@
             <h3 class="menu-label">
                 目录
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#匹配单个字符">
+        <span class="has-mr-6">1</span>
+        <span>匹配单个字符</span>
+        </a></li><li>
+        <a class="is-flex" href="#匹配一组字符">
+        <span class="has-mr-6">2</span>
+        <span>匹配一组字符</span>
+        </a></li><li>
+        <a class="is-flex" href="#使用元字符">
+        <span class="has-mr-6">3</span>
+        <span>使用元字符</span>
+        </a></li><li>
+        <a class="is-flex" href="#重复匹配">
+        <span class="has-mr-6">4</span>
+        <span>重复匹配</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
