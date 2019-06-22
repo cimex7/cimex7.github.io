@@ -2,25 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>抖抖和小芒果 - Cimex</title>
+<title>20.有效的括号 - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="大外甥抖抖[呲牙]">
+    <meta name="description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效.">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="抖抖和小芒果">
-<meta property="og:url" content="http://yoursite.com/2019/05/28/抖抖和小芒果/index.html">
+<meta property="og:title" content="20.有效的括号">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/学车之科目三/index.html">
 <meta property="og:site_name" content="Cimex">
-<meta property="og:description" content="大外甥抖抖[呲牙]">
+<meta property="og:description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/05/28/抖抖和小芒果/D1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/28/抖抖和小芒果/M7.jpg">
-<meta property="og:updated_time" content="2019-05-28T13:39:42.768Z">
+<meta property="og:updated_time" content="2019-06-22T14:53:00.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="抖抖和小芒果">
-<meta name="twitter:description" content="大外甥抖抖[呲牙]">
-<meta name="twitter:image" content="http://yoursite.com/2019/05/28/抖抖和小芒果/D1.jpg">
+<meta name="twitter:title" content="20.有效的括号">
+<meta name="twitter:description" content="给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效.">
 
 
 
@@ -89,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="抖抖和小芒果" height="28">
+                <img src="/images/logo.svg" alt="20.有效的括号" height="28">
             
             </a>
         </div>
@@ -131,7 +129,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
+            <img class="thumbnail" src="/gallery/leetcode.png" alt="20.有效的括号">
         </span>
     </div>
     
@@ -139,17 +137,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-27T16:00:00.000Z">2019-05-28</time>
+                <time class="level-item has-text-grey" datetime="2019-05-13T16:00:00.000Z">2019-05-14</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/日常/">日常</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
+                <a class="has-link-grey -link" href="/categories/LeetCode/">LeetCode</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/LeetCode/字符串/">字符串</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 246 个字)
+                    1 分钟 读完 (大约 205 个字)
                 </span>
                 
                 
@@ -158,13 +156,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                抖抖和小芒果
+                20.有效的括号
             
         </h1>
         <div class="content">
-            <p>大外甥抖抖[呲牙]<br><a id="more"></a><br><img src="/2019/05/28/抖抖和小芒果/D1.jpg"></p>
-<p>要和小芒果姐姐一起健康快乐成长阿！<br>刚才买樱桃吃，没熟味道有点像桑葚，前几天在家吃过桑葚，想到桑葚，又想到很多东西。<br>小时候，她们在树上摘桑葚，我在下面吃，她们在塘里偷莲蓬，我在岸上吃。<br>时间真是个奇妙的东西，我有过一段黑暗的时光，我总问别人，问自己，活着是为了什么，很多次的失眠我想到了死亡，我不认为我的心理有问题，你也无法从我脸上觉察到什么。<br>其实慢慢的，自然就懂了，活着便是活着，他们就是答案，活着就是为了这些片段瞬间，或好或坏，这些经历的积分便是生活便是生命。<br><img src="/2019/05/28/抖抖和小芒果/M7.jpg"></p>
+            <p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效.<br><a id="more"></a></p>
+<p>有效字符串需满足：</p>
+<ul>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+</ul>
+<p>空字符串可被认为是有效字符串。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: &quot;()&quot;</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: &quot;(]&quot;</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">示例 4:</span><br><span class="line">输入: &quot;([)]&quot;</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">示例 5:</span><br><span class="line">输入: &quot;&#123;[]&#125;&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p>解答：</p>
+<p>很显然可以用栈来做，但是python没有专门入栈的方法，需要用append().<br>这里直接用字符串替换，看最终是否剩下空串来判断括号是否有效<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isValid</span><span class="hljs-params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="hljs-keyword">while</span> <span class="hljs-string">'&#123;&#125;'</span> <span class="hljs-keyword">in</span> s <span class="hljs-keyword">or</span> <span class="hljs-string">'()'</span> <span class="hljs-keyword">in</span> s <span class="hljs-keyword">or</span> <span class="hljs-string">'[]'</span> <span class="hljs-keyword">in</span> s:</span><br><span class="line">            s = s.replace(<span class="hljs-string">'&#123;&#125;'</span>, <span class="hljs-string">''</span>)</span><br><span class="line">            s = s.replace(<span class="hljs-string">'[]'</span>, <span class="hljs-string">''</span>)</span><br><span class="line">            s = s.replace(<span class="hljs-string">'()'</span>, <span class="hljs-string">''</span>)</span><br><span class="line">        <span class="hljs-keyword">return</span> s == <span class="hljs-string">''</span></span><br></pre></td></tr></table></figure></p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/LeetCode/">LeetCode</a>
+                </div>
+            </div>
         </div>
         
         
@@ -180,16 +195,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/06/git提交到远程库问题/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/18/抖抖和小芒果/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">git提交到远程库问题</span>
+                <span class="level-item">抖抖和小芒果</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/23/Flask框架/">
-                <span class="level-item">Flask框架</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/13/1-两数之和/">
+                <span class="level-item">1.两数之和</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -311,7 +326,7 @@
                 <span class="level-item">LeetCode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">11</span>
+                <span class="level-item tag">12</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/LeetCode/二分查找/">
@@ -327,7 +342,7 @@
                 <span class="level-item">字符串</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/LeetCode/排序/">
@@ -609,25 +624,6 @@
         
         <article class="media">
             
-            <a href="/2019/05/28/抖抖和小芒果/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-27T16:00:00.000Z">2019-05-28</time></div>
-                    <a href="/2019/05/28/抖抖和小芒果/" class="has-link-black-ter is-size-6">抖抖和小芒果</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/05/23/Flask框架/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/Flask.jpg" alt="Flask框架">
@@ -659,6 +655,25 @@
                     <a href="/2019/05/20/520/" class="has-link-black-ter is-size-6">520</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/节日/">节日</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/18/抖抖和小芒果/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-17T16:00:00.000Z">2019-05-18</time></div>
+                    <a href="/2019/05/18/抖抖和小芒果/" class="has-link-black-ter is-size-6">抖抖和小芒果</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
                     </p>
                 </div>
             </div>
@@ -794,25 +809,6 @@
         
         <article class="media">
             
-            <a href="/2019/05/28/抖抖和小芒果/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-27T16:00:00.000Z">2019-05-28</time></div>
-                    <a href="/2019/05/28/抖抖和小芒果/" class="has-link-black-ter is-size-6">抖抖和小芒果</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/05/23/Flask框架/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/Flask.jpg" alt="Flask框架">
@@ -844,6 +840,25 @@
                     <a href="/2019/05/20/520/" class="has-link-black-ter is-size-6">520</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/节日/">节日</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/18/抖抖和小芒果/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-17T16:00:00.000Z">2019-05-18</time></div>
+                    <a href="/2019/05/18/抖抖和小芒果/" class="has-link-black-ter is-size-6">抖抖和小芒果</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/日常/">日常</a> / <a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
                     </p>
                 </div>
             </div>
@@ -933,7 +948,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="抖抖和小芒果" height="28">
+                    <img src="/images/logo.svg" alt="20.有效的括号" height="28">
                 
                 </a>
                 <p class="is-size-7">
