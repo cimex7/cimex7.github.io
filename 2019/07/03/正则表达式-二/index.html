@@ -2,18 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: 日常 - Cimex</title>
+<title>正则表达式(二) - Cimex</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cimex">
-<meta property="og:url" content="http://yoursite.com/categories/日常/index.html">
+    <meta name="description" content="位置匹配">
+<meta name="keywords" content="RegEx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式(二)">
+<meta property="og:url" content="http://yoursite.com/2019/07/03/正则表达式-二/index.html">
 <meta property="og:site_name" content="Cimex">
+<meta property="og:description" content="位置匹配">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-03T13:35:59.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimex">
+<meta name="twitter:title" content="正则表达式(二)">
+<meta name="twitter:description" content="位置匹配">
 
 
 
@@ -82,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Cimex" height="28">
+                <img src="/images/logo.svg" alt="正则表达式(二)" height="28">
             
             </a>
         </div>
@@ -103,6 +108,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -117,40 +126,28 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">日常</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/05/20/520/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/singledog.jpg" alt="520">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/regex.jpg" alt="正则表达式(二)">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-19T16:00:00.000Z">2019-05-20</time>
+                <time class="level-item has-text-grey" datetime="2019-07-02T16:00:00.000Z">2019-07-03</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/日常/">日常</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/日常/节日/">节日</a>
+                <a class="has-link-grey -link" href="/categories/工具/">工具</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/工具/正则表达式/">正则表达式</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 1 个字)
+                    1 分钟 读完 (大约 200 个字)
                 </span>
                 
                 
@@ -159,72 +156,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/20/520/">520</a>
+                正则表达式(二)
             
         </h1>
         <div class="content">
-            <a id="more"></a>
-
+            <h1 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h1><a id="more"></a>
+<p><strong><em>单词边界</em></strong><br>\b 可以匹配一个单词的边界，边界是指位于 \w 和 \W 之间的位置；\B 匹配一个不是单词边界的位置。</p>
+<p>\b 只匹配位置，不匹配字符，因此 \babc\b 匹配出来的结果为 3 个字符。</p>
+<p><strong><em>字符串边界</em></strong><br>^ 匹配整个字符串的开头，$ 匹配结尾。</p>
+<p>^ 元字符在字符集合中用作求非，在字符集合外用作匹配字符串的开头。</p>
+<p>分行匹配模式（multiline）下，换行被当做字符串的边界。</p>
+<p>应用<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中以 // 开始的注释行</span><br></pre></td></tr></table></figure></p>
+<p>正则表达式<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\s*\/\/.*$</span><br></pre></td></tr></table></figure></p>
+<p>匹配结果为注释1和2</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">     <span class="hljs-comment">// 注释 1</span></span><br><span class="line">     <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;</span><br><span class="line">     <span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span>;</span><br><span class="line">     <span class="hljs-comment">// 注释 2</span></span><br><span class="line">     <span class="hljs-keyword">int</span> c = a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/05/18/抖抖和小芒果/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/抖抖.jpg" alt="抖抖和小芒果">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-17T16:00:00.000Z">2019-05-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/日常/">日常</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/日常/随笔/">随笔</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 250 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/05/18/抖抖和小芒果/">抖抖和小芒果</a>
-            
-        </h1>
-        <div class="content">
-            <p>又多了个大外甥抖抖[呲牙]<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/05/18/抖抖和小芒果/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/RegEx/">RegEx</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -234,7 +190,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/08/正则表达式/">
+                <span class="level-item">正则表达式(一)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -324,6 +292,21 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#位置匹配">
+        <span class="has-mr-6">1</span>
+        <span>位置匹配</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -983,7 +966,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Cimex" height="28">
+                    <img src="/images/logo.svg" alt="正则表达式(二)" height="28">
                 
                 </a>
                 <p class="is-size-7">
