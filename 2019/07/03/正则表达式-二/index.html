@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Cimex">
 <meta property="og:description" content="位置匹配">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-14T02:35:48.355Z">
+<meta property="og:updated_time" content="2019-07-25T12:47:47.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式(二)">
 <meta name="twitter:description" content="位置匹配">
@@ -166,7 +166,7 @@
 <p><strong><em>字符串边界</em></strong><br>^ 匹配整个字符串的开头，$ 匹配结尾。</p>
 <p>^ 元字符在字符集合中用作求非，在字符集合外用作匹配字符串的开头。</p>
 <p>分行匹配模式（multiline）下，换行被当做字符串的边界。</p>
-<p>应用<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中以 // 开始的注释行</span><br></pre></td></tr></table></figure></p>
+<p>应用<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中以// 开始的注释行</span><br></pre></td></tr></table></figure></p>
 <p>正则表达式<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\s*\/\/.*$</span><br></pre></td></tr></table></figure></p>
 <p>匹配结果为注释1和2</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">     <span class="hljs-comment">// 注释1</span></span><br><span class="line">     <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;</span><br><span class="line">     <span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span>;</span><br><span class="line">     <span class="hljs-comment">// 注释2</span></span><br><span class="line">     <span class="hljs-keyword">int</span> c = a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
